@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Corp | Soluciones Estratégicas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES CSS (PALETA PROFESIONAL) --- */
+        :root {
+            --primary: #0f172a;      /* Azul Oscuro Corporativo */
+            --secondary: #1e293b;    /* Gris Azulado */
+            --accent: #3b82f6;       /* Azul Brillante (Tech) */
+            --highlight: #f59e0b;    /* Dorado/Naranja para CTAs */
+            --text-light: #f8fafc;
+            --text-dark: #334155;
+            --bg-light: #ffffff;
+            --bg-gray: #f1f5f9;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- UTILIDADES DE ANIMACIÓN (CLASES JS) --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 5%;
+            transition: var(--transition);
+            background: transparent;
+        }
+        header.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            padding: 0.8rem 5%;
+            backdrop-filter: blur(10px);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-light);
+            letter-spacing: -1px;
+        }
+        .logo span { color: var(--accent); }
+        
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        
+        /* Mobile Menu Button */
+        .menu-toggle { display: none; color: var(--text-light); font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed; /* Efecto Parallax */
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+        .hero-content { color: var(--text-light); max-width: 800px; }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .hero p { font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.9; }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--text-light);
+            border: 2px solid var(--accent);
+        }
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--text-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        /* --- SECTIONS GENERAL --- */
+        section { padding: 5rem 10%; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-header h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .section-header p { color: #64748b; max-width: 600px; margin: 0 auto; }
+
+        /* --- SERVICES (CARDS) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--bg-light);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--accent);
+        }
+        .card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        .card h3 { margin-bottom: 1rem; color: var(--primary); }
+
+        /* --- STATS COUNTER --- */
+        .stats {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 4rem 10%;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            text-align: center;
+        }
+        .stat-item h3 { font-size: 3rem; color: var(--accent); font-weight: 800; }
+        .stat-item p { font-size: 1.1rem; opacity: 0.8; }
+
+        /* --- ABOUT & MAP --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .map-container {
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- WHATSAPP FLOAT --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--secondary);
+            color: var(--text-light);
+            padding: 4rem 10% 1rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .footer-col h4 { margin-bottom: 1.5rem; color: var(--accent); }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a:hover { color: var(--accent); margin-left: 5px; transition: var(--transition); }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links {
+                display: none; /* JS will toggle this */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Apex<span>Corp</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>Impulsamos el Futuro de tu Negocio</h1>
+            <p>Soluciones tecnológicas y consultoría estratégica para empresas que buscan liderar el mercado.</p>
+            <a href="#contact" class="btn btn-primary">Cotizar Proyecto</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-header reveal">
+            <h2>Nuestros Servicios</h2>
+            <p>Estrategias integrales diseñadas para el crecimiento corporativo.</p>
+        </div>
+        <div class="services-grid">
+            <div class="card reveal">
+                <i class="fas fa-chart-line"></i>
+                <h3>Consultoría Estratégica</h3>
+                <p>Optimizamos tus procesos de negocio con análisis de datos y proyecciones financieras precisas.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fas fa-code"></i>
+                <h3>Desarrollo de Software</h3>
+                <p>Creamos plataformas robustas, seguras y escalables a la medida de tu organización.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Ciberseguridad</h3>
+                <p>Protección avanzada para tus activos digitales con monitoreo 24/7 y protocolos internacionales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats" id="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3 data-target="150">0</h3>
+                <p>Proyectos Completados</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="50">0</h3>
+                <p>Expertos en Equipo</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="10">0</h3>
+                <p>Años de Experiencia</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="98">0</h3>
+                <p>% Satisfacción</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header reveal">
+            <h2>Contáctanos</h2>
+            <p>Estamos listos para escuchar tu próximo gran desafío.</p>
+        </div>
+        <div class="contact-container reveal">
+            <form id="contactForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Nombre completo" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Correo corporativo" required>
+                </div>
+                <div class="input-group">
+                    <textarea rows="5" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="border:none; width:100%">Enviar Mensaje</button>
+            </form>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531664!3d-37.817323442021134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sus!4v1642999999999!5m2!1sen!2sus" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="color:white; font-size:1.5rem">Apex<span>Corp</span></a>
+                <p style="margin-top:1rem; opacity:0.7">Transformando ideas en realidades digitales sólidas y rentables.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Tecnológica 123, Piso 5</li>
+                    <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+                    <li><i class="fas fa-envelope"></i> contacto@apexcorp.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Apex Corp. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // 1. NAVBAR SCROLL EFFECT
+        // Cambia el navbar de transparente a sólido al bajar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 2. MOBILE MENU TOGGLE
+        // Lógica para abrir/cerrar menú en celulares
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+
+        // 3. SCROLL REVEAL ANIMATION (Intersection Observer)
+        // Hace que los elementos aparezcan al hacer scroll
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Solo animar una vez
+                }
+            });
+        };
+
+        const revealOptions = {
+            threshold: 0.15, // Se activa cuando el 15% del elemento es visible
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 4. NUMBER COUNTER ANIMATION
+        // Anima los números de 0 al valor final en la sección Stats
+        const statsSection = document.getElementById('stats-section');
+        const counters = document.querySelectorAll('.stat-item h3');
+        let started = false; // Flag para asegurar que solo corra una vez
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const increment = target / 100; // Velocidad relativa
+                
+                const updateCounter = () => {
+                    const c = +counter.innerText;
+                    if(c < target) {
+                        counter.innerText = Math.ceil(c + increment);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.innerText = target + (target > 10 ? '+' : ''); // Añade un + si es mayor a 10
+                    }
+                };
+                updateCounter();
+            });
+        };
+
+        // Observer para activar los contadores solo cuando son visibles
+        const statsObserver = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting && !started) {
+                startCounters();
+                started = true;
+            }
+        });
+        statsObserver.observe(statsSection);
+
+        // 5. FORM SUBMISSION (Simulación)
+        // Previene la recarga y simula envío exitoso con animación
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Enviando...';
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.innerText = '¡Mensaje Enviado!';
+                btn.style.backgroundColor = '#10b981'; // Verde éxito
+                this.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = ''; 
+                    btn.style.opacity = '1';
+                }, 3000);
+            }, 1500);
+        });
+
+    </script>
+</body>
+</html>
