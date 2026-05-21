@@ -3,34 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lex Universalis | Estudio Jurídico Internacional</title>
-  <meta name="description" content="Firma jurídica internacional especializada en Derecho Administrativo, Licitaciones Internacionales y Consultoría Corporativa." />
+  <title>González Morgan & Asociados | Estudio Jurídico Internacional</title>
+  <meta name="description" content="Firma jurídica internacional fundada en 1980. Especialistas en Derecho Penal, Corporativo, Hidrocarburos, Administrativo y más. Presencia en Venezuela, América Latina y Europa." />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome 6 — versión completa que incluye TODOS los estilos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy:  { 900:'#070e28', 800:'#0c1a40', 700:'#122558', 600:'#1a3570', 500:'#2d4d8a' },
-            gold:  { 300:'#e8d5a3', 400:'#d4b57a', 500:'#c49a4a', 600:'#a67c35', 700:'#8b6328' },
-            cream: { 50:'#fdfcf9', 100:'#f8f5ef' },
+            navy: { 900:'#070e28', 800:'#0c1a40', 700:'#122558', 600:'#1a3570', 500:'#2d4d8a' },
+            gold: { 300:'#e8d5a3', 400:'#d4b57a', 500:'#c49a4a', 600:'#a67c35', 700:'#8b6328' },
+            cream:{ 50:'#fdfcf9', 100:'#f8f5ef' },
           },
           fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans:  ['"DM Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Cormorant Garamond"','Georgia','serif'],
+            sans:  ['"DM Sans"','system-ui','sans-serif'],
           },
         }
       }
@@ -38,173 +31,100 @@
   </script>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', system-ui, sans-serif; background-color: #fdfcf9; color: #1a2540; overflow-x: hidden; }
-
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #f8f5ef; }
-    ::-webkit-scrollbar-thumb { background: #1a3570; border-radius: 4px; }
-
-    .display-xl { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; line-height: 1.08; letter-spacing: -0.01em; }
-    .label-caps  { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',system-ui,sans-serif;background-color:#fdfcf9;color:#1a2540;overflow-x:hidden}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#f8f5ef}::-webkit-scrollbar-thumb{background:#1a3570;border-radius:4px}
+    .display-xl{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;line-height:1.08;letter-spacing:-0.01em}
+    .label-caps{font-family:'DM Sans',system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
 
     /* NAVBAR */
-    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: all 0.5s cubic-bezier(0.4,0,0.2,1); }
-    #navbar.scrolled {
-      background: rgba(7,14,40,0.88);
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      border-bottom: 1px solid rgba(196,154,74,0.18);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.28);
-    }
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .5s cubic-bezier(.4,0,.2,1)}
+    #navbar.scrolled{background:rgba(7,14,40,.88);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(196,154,74,.18);box-shadow:0 8px 32px rgba(0,0,0,.28)}
 
     /* HERO */
-    #hero {
-      background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80');
-      background-size: cover; background-position: center 30%;
-      min-height: 100vh; position: relative; display: flex; align-items: center;
-    }
-    #hero::before {
-      content:''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(7,14,40,0.90) 0%, rgba(12,26,64,0.80) 50%, rgba(18,37,88,0.68) 100%);
-    }
-    #hero::after {
-      content:''; position: absolute; bottom: 0; left: 0; right: 0; height: 160px;
-      background: linear-gradient(to bottom, transparent, #fdfcf9);
-    }
+    #hero{background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80');background-size:cover;background-position:center 30%;min-height:100vh;position:relative;display:flex;align-items:center}
+    #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,14,40,.90) 0%,rgba(12,26,64,.80) 50%,rgba(18,37,88,.68) 100%)}
+    #hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to bottom,transparent,#fdfcf9)}
 
-    /* PRACTICE CARDS */
-    .practice-card {
-      background: #fff; border: 1px solid rgba(26,53,112,0.08); border-bottom: 3px solid transparent;
-      transition: all 0.4s cubic-bezier(0.4,0,0.2,1); position: relative; overflow: hidden;
-    }
-    .practice-card::before {
-      content:''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      background: linear-gradient(180deg, #c49a4a, #8b6328);
-      transform: scaleY(0); transform-origin: bottom; transition: transform 0.4s ease;
-    }
-    .practice-card:hover { border-bottom-color: #c49a4a; box-shadow: 0 20px 60px rgba(7,14,40,0.12); transform: translateY(-4px); }
-    .practice-card:hover::before { transform: scaleY(1); }
+    /* CARDS */
+    .practice-card{background:#fff;border:1px solid rgba(26,53,112,.08);border-bottom:3px solid transparent;transition:all .4s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+    .practice-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#c49a4a,#8b6328);transform:scaleY(0);transform-origin:bottom;transition:transform .4s ease}
+    .practice-card:hover{border-bottom-color:#c49a4a;box-shadow:0 20px 60px rgba(7,14,40,.12);transform:translateY(-4px)}
+    .practice-card:hover::before{transform:scaleY(1)}
 
     /* PODCAST */
-    #podcast { background: linear-gradient(135deg, #070e28 0%, #0c1a40 40%, #122558 100%); position: relative; overflow: hidden; }
-    #podcast::before {
-      content: ''; position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c49a4a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
-    }
+    #podcast{background:linear-gradient(135deg,#070e28 0%,#0c1a40 40%,#122558 100%);position:relative;overflow:hidden}
+    #podcast::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c49a4a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
 
     /* WAVEFORM */
-    .waveform { display: flex; align-items: center; gap: 3px; height: 40px; }
-    .waveform span { display: block; width: 3px; border-radius: 3px; background: linear-gradient(180deg, #c49a4a, #e8d5a3); animation: wave 1.2s ease-in-out infinite; }
-    .waveform span:nth-child(1)  { height:60%;  animation-delay:0.0s; }
-    .waveform span:nth-child(2)  { height:85%;  animation-delay:0.1s; }
-    .waveform span:nth-child(3)  { height:45%;  animation-delay:0.2s; }
-    .waveform span:nth-child(4)  { height:100%; animation-delay:0.3s; }
-    .waveform span:nth-child(5)  { height:70%;  animation-delay:0.4s; }
-    .waveform span:nth-child(6)  { height:55%;  animation-delay:0.5s; }
-    .waveform span:nth-child(7)  { height:90%;  animation-delay:0.6s; }
-    .waveform span:nth-child(8)  { height:40%;  animation-delay:0.7s; }
-    .waveform span:nth-child(9)  { height:75%;  animation-delay:0.8s; }
-    .waveform span:nth-child(10) { height:60%;  animation-delay:0.9s; }
-    .waveform span:nth-child(11) { height:85%;  animation-delay:1.0s; }
-    .waveform span:nth-child(12) { height:50%;  animation-delay:0.15s; }
-    .waveform span:nth-child(13) { height:95%;  animation-delay:0.25s; }
-    .waveform span:nth-child(14) { height:65%;  animation-delay:0.35s; }
-    .waveform span:nth-child(15) { height:80%;  animation-delay:0.45s; }
-    @keyframes wave { 0%,100%{transform:scaleY(0.5);opacity:0.6} 50%{transform:scaleY(1);opacity:1} }
-    .waveform.paused span { animation-play-state: paused; }
+    .waveform{display:flex;align-items:center;gap:3px;height:40px}
+    .waveform span{display:block;width:3px;border-radius:3px;background:linear-gradient(180deg,#c49a4a,#e8d5a3);animation:wave 1.2s ease-in-out infinite}
+    .waveform span:nth-child(1){height:60%;animation-delay:.0s}.waveform span:nth-child(2){height:85%;animation-delay:.1s}
+    .waveform span:nth-child(3){height:45%;animation-delay:.2s}.waveform span:nth-child(4){height:100%;animation-delay:.3s}
+    .waveform span:nth-child(5){height:70%;animation-delay:.4s}.waveform span:nth-child(6){height:55%;animation-delay:.5s}
+    .waveform span:nth-child(7){height:90%;animation-delay:.6s}.waveform span:nth-child(8){height:40%;animation-delay:.7s}
+    .waveform span:nth-child(9){height:75%;animation-delay:.8s}.waveform span:nth-child(10){height:60%;animation-delay:.9s}
+    .waveform span:nth-child(11){height:85%;animation-delay:1.0s}.waveform span:nth-child(12){height:50%;animation-delay:.15s}
+    .waveform span:nth-child(13){height:95%;animation-delay:.25s}.waveform span:nth-child(14){height:65%;animation-delay:.35s}
+    .waveform span:nth-child(15){height:80%;animation-delay:.45s}
+    @keyframes wave{0%,100%{transform:scaleY(.5);opacity:.6}50%{transform:scaleY(1);opacity:1}}
+    .waveform.paused span{animation-play-state:paused}
 
-    /* PROGRESS BAR */
-    .progress-bar { height:3px; background:rgba(196,154,74,0.2); border-radius:3px; overflow:hidden; cursor:pointer; }
-    .progress-fill { height:100%; background:linear-gradient(90deg,#c49a4a,#e8d5a3); border-radius:3px; width:35%; transition:width 0.1s linear; }
+    .progress-bar{height:3px;background:rgba(196,154,74,.2);border-radius:3px;overflow:hidden;cursor:pointer}
+    .progress-fill{height:100%;background:linear-gradient(90deg,#c49a4a,#e8d5a3);border-radius:3px;width:35%;transition:width .1s linear}
 
     /* BLOG */
-    .blog-card { background:#fff; border:1px solid rgba(26,53,112,0.07); transition:all 0.35s ease; overflow:hidden; }
-    .blog-card:hover { box-shadow:0 24px 64px rgba(7,14,40,0.1); transform:translateY(-3px); }
-    .blog-card .img-wrap { overflow:hidden; }
-    .blog-card .img-wrap img { transition:transform 0.6s ease; width:100%; object-fit:cover; height:200px; }
-    .blog-card:hover .img-wrap img { transform:scale(1.04); }
+    .blog-card{background:#fff;border:1px solid rgba(26,53,112,.07);transition:all .35s ease;overflow:hidden}
+    .blog-card:hover{box-shadow:0 24px 64px rgba(7,14,40,.1);transform:translateY(-3px)}
+    .blog-card .img-wrap{overflow:hidden}
+    .blog-card .img-wrap img{transition:transform .6s ease;width:100%;object-fit:cover;height:200px}
+    .blog-card:hover .img-wrap img{transform:scale(1.04)}
 
     /* FORM */
-    .form-group input, .form-group textarea, .form-group select {
-      width:100%; border:1px solid rgba(26,53,112,0.15); border-radius:2px;
-      padding:0.85rem 1rem; font-family:'DM Sans',sans-serif; font-size:0.9rem;
-      color:#1a2540; background:#fff; outline:none; transition:border-color 0.25s,box-shadow 0.25s;
-    }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-      border-color:#c49a4a; box-shadow:0 0 0 3px rgba(196,154,74,0.12);
-    }
-    .form-group label {
-      display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.18em;
-      text-transform:uppercase; color:#2d4d8a; margin-bottom:0.45rem;
-    }
+    .form-group input,.form-group textarea,.form-group select{width:100%;border:1px solid rgba(26,53,112,.15);border-radius:2px;padding:.85rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;color:#1a2540;background:#fff;outline:none;transition:border-color .25s,box-shadow .25s}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:#c49a4a;box-shadow:0 0 0 3px rgba(196,154,74,.12)}
+    .form-group label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#2d4d8a;margin-bottom:.45rem}
 
     /* BUTTONS */
-    .btn-primary {
-      display:inline-flex; align-items:center; gap:0.5rem;
-      background:linear-gradient(135deg,#c49a4a 0%,#a67c35 100%);
-      color:#fff; padding:0.85rem 2rem;
-      font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:600;
-      letter-spacing:0.2em; text-transform:uppercase;
-      border:none; cursor:pointer; transition:all 0.3s ease; text-decoration:none; border-radius:1px;
-    }
-    .btn-primary:hover { background:linear-gradient(135deg,#d4b57a 0%,#c49a4a 100%); box-shadow:0 8px 30px rgba(196,154,74,0.38); transform:translateY(-2px); }
-    .btn-outline {
-      display:inline-flex; align-items:center; gap:0.5rem;
-      background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.4);
-      padding:0.85rem 2rem; font-family:'DM Sans',sans-serif; font-size:0.75rem;
-      font-weight:500; letter-spacing:0.18em; text-transform:uppercase;
-      cursor:pointer; transition:all 0.3s ease; text-decoration:none; border-radius:1px;
-    }
-    .btn-outline:hover { background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.7); }
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#c49a4a 0%,#a67c35 100%);color:#fff;padding:.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s ease;text-decoration:none;border-radius:1px}
+    .btn-primary:hover{background:linear-gradient(135deg,#d4b57a 0%,#c49a4a 100%);box-shadow:0 8px 30px rgba(196,154,74,.38);transform:translateY(-2px)}
+    .btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:all .3s ease;text-decoration:none;border-radius:1px}
+    .btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
 
-    /* STATS */
-    .stat-number { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:#1a3570; line-height:1; }
-
-    /* DIVIDER */
-    .gold-divider { height:1px; background:linear-gradient(90deg,transparent,#c49a4a 40%,#c49a4a 60%,transparent); opacity:0.35; }
+    .stat-number{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:#1a3570;line-height:1}
+    .gold-divider{height:1px;background:linear-gradient(90deg,transparent,#c49a4a 40%,#c49a4a 60%,transparent);opacity:.35}
 
     /* REVEAL */
-    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
-    .reveal.visible { opacity:1; transform:translateY(0); }
-    .reveal-delay-1 { transition-delay:0.1s; }
-    .reveal-delay-2 { transition-delay:0.2s; }
-    .reveal-delay-3 { transition-delay:0.3s; }
-    .reveal-delay-4 { transition-delay:0.4s; }
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
 
     /* MOBILE MENU */
-    #mobile-menu {
-      display:none; position:fixed; inset:0; z-index:200;
-      background:rgba(7,14,40,0.97); backdrop-filter:blur(10px);
-      flex-direction:column; align-items:center; justify-content:center; gap:2rem;
-    }
-    #mobile-menu.open { display:flex; }
-    #mobile-menu a { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; color:#fff; letter-spacing:0.05em; text-decoration:none; transition:color 0.2s; }
-    #mobile-menu a:hover { color:#c49a4a; }
+    #mobile-menu{display:none;position:fixed;inset:0;z-index:200;background:rgba(7,14,40,.97);backdrop-filter:blur(10px);flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    #mobile-menu.open{display:flex}
+    #mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#fff;letter-spacing:.05em;text-decoration:none;transition:color .2s}
+    #mobile-menu a:hover{color:#c49a4a}
 
-    /* FLAGS */
-    .flag-item { display:flex; align-items:center; gap:0.6rem; color:rgba(255,255,255,0.55); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; }
+    .flag-item{display:flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.55);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
 
-    /* FOOTER */
-    #footer { background:#070e28; color:rgba(255,255,255,0.6); }
-    #footer a { transition:color 0.2s; }
-    #footer a:hover { color:#c49a4a; }
+    #footer{background:#070e28;color:rgba(255,255,255,.6)}
+    #footer a{transition:color .2s}#footer a:hover{color:#c49a4a}
 
-    /* TOAST */
-    #toast {
-      position:fixed; bottom:2rem; right:2rem; z-index:999;
-      background:#1a3570; color:#fff; padding:1rem 1.5rem;
-      border-left:3px solid #c49a4a; border-radius:2px; font-size:0.85rem;
-      box-shadow:0 10px 40px rgba(0,0,0,0.3);
-      transform:translateX(200%); transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    #toast.show { transform:translateX(0); }
+    #toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:#1a3570;color:#fff;padding:1rem 1.5rem;border-left:3px solid #c49a4a;border-radius:2px;font-size:.85rem;box-shadow:0 10px 40px rgba(0,0,0,.3);transform:translateX(200%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+    #toast.show{transform:translateX(0)}
 
-    /* Formspree status */
-    #form-status { display:none; padding:0.75rem 1rem; border-radius:2px; font-size:0.85rem; margin-top:1rem; }
-    #form-status.success { background:#d1fae5; color:#065f46; border-left:3px solid #10b981; display:block; }
-    #form-status.error   { background:#fee2e2; color:#991b1b; border-left:3px solid #ef4444; display:block; }
+    #form-status{display:none;padding:.75rem 1rem;border-radius:2px;font-size:.85rem;margin-top:1rem}
+    #form-status.success{background:#d1fae5;color:#065f46;border-left:3px solid #10b981;display:block}
+    #form-status.error{background:#fee2e2;color:#991b1b;border-left:3px solid #ef4444;display:block}
+
+    /* TEAM CARDS */
+    .team-card{background:#fff;border:1px solid rgba(26,53,112,.07);padding:2rem;transition:all .35s ease}
+    .team-card:hover{box-shadow:0 20px 50px rgba(7,14,40,.1);transform:translateY(-3px)}
+    .team-avatar{width:4rem;height:4rem;border-radius:50%;background:linear-gradient(135deg,#1a3570,#2d4d8a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#e8d5a3;margin-bottom:1.25rem}
+
+    /* AFFILIATES STRIP */
+    .affiliate-badge{padding:.6rem 1.25rem;border:1px solid rgba(196,154,74,.2);background:#fff;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#1a3570}
   </style>
 </head>
 
@@ -213,36 +133,29 @@
 <!-- ══════ NAVBAR ══════ -->
 <nav id="navbar" class="px-6 lg:px-12 py-5">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
-
     <a href="#" class="flex items-center gap-3">
-      <div class="w-9 h-9 border flex items-center justify-center flex-shrink-0" style="border-color:#c49a4a;">
-        <span style="color:#c49a4a;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;">L</span>
+      <div class="w-10 h-10 border flex items-center justify-center flex-shrink-0" style="border-color:#c49a4a;">
+        <span style="color:#c49a4a;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;">GM</span>
       </div>
       <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:#fff;letter-spacing:0.08em;line-height:1;">LEX UNIVERSALIS</div>
-        <div class="label-caps" style="color:#c49a4a;font-size:0.58rem;letter-spacing:0.3em;">Estudio Jurídico Internacional</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:#fff;letter-spacing:.06em;line-height:1;">GONZÁLEZ MORGAN</div>
+        <div class="label-caps" style="color:#c49a4a;font-size:.56rem;letter-spacing:.25em;">&amp; Asociados · Estudio Jurídico Internacional</div>
       </div>
     </a>
-
-    <!-- Desktop links -->
-    <div class="hidden lg:flex items-center gap-8">
-      <a href="#areas"    class="label-caps text-white hover:text-gold-400 transition-colors" style="font-size:0.68rem;opacity:0.7;">Áreas de Práctica</a>
-      <a href="#podcast"  class="label-caps text-white hover:text-gold-400 transition-colors" style="font-size:0.68rem;opacity:0.7;">Podcast</a>
-      <a href="#blog"     class="label-caps text-white hover:text-gold-400 transition-colors" style="font-size:0.68rem;opacity:0.7;">Actualidad</a>
-      <a href="#contacto" class="label-caps text-white hover:text-gold-400 transition-colors" style="font-size:0.68rem;opacity:0.7;">Contacto</a>
-      <a href="#contacto" class="btn-primary" style="padding:0.65rem 1.4rem;">
-        <!-- SVG globe icon — no depende de Font Awesome -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    <div class="hidden lg:flex items-center gap-7">
+      <a href="#areas"    class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Áreas de Práctica</a>
+      <a href="#equipo"   class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">El Equipo</a>
+      <a href="#podcast"  class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Podcast</a>
+      <a href="#blog"     class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Actualidad</a>
+      <a href="#contacto" class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Contacto</a>
+      <a href="#contacto" class="btn-primary" style="padding:.6rem 1.35rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         Consulta Global
       </a>
     </div>
-
-    <!-- Burger — SVG inline, siempre visible -->
     <button id="burger" class="lg:hidden text-white p-2" aria-label="Abrir menú">
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6"  x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
     </button>
   </div>
@@ -250,18 +163,15 @@
 
 <!-- ══════ MOBILE MENU ══════ -->
 <div id="mobile-menu" role="dialog" aria-modal="true">
-  <button id="close-menu" aria-label="Cerrar menú"
-          style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.7);">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <line x1="18" y1="6"  x2="6" y2="18"/>
-      <line x1="6"  y1="6"  x2="18" y2="18"/>
-    </svg>
+  <button id="close-menu" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.7);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
   <a href="#areas"    onclick="closeMobileMenu()">Áreas de Práctica</a>
+  <a href="#equipo"   onclick="closeMobileMenu()">El Equipo</a>
   <a href="#podcast"  onclick="closeMobileMenu()">Podcast</a>
   <a href="#blog"     onclick="closeMobileMenu()">Actualidad</a>
   <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
-  <a href="#contacto" onclick="closeMobileMenu()" class="btn-primary" style="font-size:0.85rem;margin-top:1rem;">Consulta Global</a>
+  <a href="#contacto" onclick="closeMobileMenu()" class="btn-primary" style="font-size:.85rem;margin-top:1rem;">Consulta Global</a>
 </div>
 
 
@@ -269,28 +179,33 @@
 <section id="hero">
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-32 pb-48">
 
-    <div class="flex items-center gap-3 mb-10 reveal">
-      <div style="width:3rem;height:1px;background:linear-gradient(90deg,transparent,#c49a4a);opacity:0.8;"></div>
+    <div class="flex items-center gap-3 mb-8 reveal">
+      <div style="width:3rem;height:1px;background:linear-gradient(90deg,transparent,#c49a4a);opacity:.8;"></div>
       <div class="flex flex-wrap items-center gap-4">
         <span class="flag-item"><span>🇻🇪</span> Venezuela</span>
-        <span class="flag-item"><span>🇺🇸</span> EE.UU.</span>
-        <span class="flag-item"><span>🇪🇸</span> España</span>
-        <span class="flag-item"><span>🇦🇪</span> EAU</span>
-        <span class="flag-item"><span>🌐</span> +12 países</span>
+        <span class="flag-item"><span>🌎</span> MERCOSUR</span>
+        <span class="flag-item"><span>🇪🇸</span> Europa</span>
+        <span class="flag-item"><span>⚖️</span> Club de Abogados</span>
+        <span class="flag-item"><span>🌐</span> TAG Law</span>
       </div>
     </div>
 
-    <h1 class="display-xl text-white mb-6 reveal reveal-delay-1" style="font-size:clamp(3.2rem,7vw,6.5rem);max-width:820px;">
-      Excelencia jurídica<br/><em style="color:#c49a4a;font-style:italic;">sin fronteras</em>
-    </h1>
+    <div class="label-caps mb-4 reveal reveal-delay-1" style="color:#c49a4a;font-size:.65rem;">Fundado en 1980 · Más de 45 años de trayectoria</div>
 
-    <p class="reveal reveal-delay-2 mb-10 leading-relaxed" style="color:rgba(255,255,255,0.65);font-size:1.1rem;max-width:520px;font-weight:300;">
-      Licitaciones internacionales, derecho administrativo y consultoría corporativa de alto nivel para instituciones y empresas que operan a escala global.
+    <h1 class="display-xl text-white mb-6 reveal reveal-delay-1" style="font-size:clamp(3rem,6.5vw,6rem);max-width:860px;">
+      González Morgan<br/>&amp; Asociados
+    </h1>
+    <h2 class="display-xl mb-8 reveal reveal-delay-2" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.4rem,3vw,2.4rem);color:#c49a4a;font-style:italic;">
+      Excelencia jurídica sin fronteras desde Caracas
+    </h2>
+
+    <p class="reveal reveal-delay-2 mb-10 leading-relaxed" style="color:rgba(255,255,255,.65);font-size:1.05rem;max-width:560px;font-weight:300;">
+      Firma jurídica internacional con más de cuatro décadas de trayectoria. Especialistas en Derecho Penal, Corporativo, Hidrocarburos y Contratación Pública, con presencia en Venezuela, América Latina y Europa.
     </p>
 
     <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
-      <a href="#areas"    class="btn-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+      <a href="#areas" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 10V6l7-3 7 3v4"/></svg>
         Nuestras Prácticas
       </a>
       <a href="#contacto" class="btn-outline">
@@ -299,96 +214,199 @@
       </a>
     </div>
 
-    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal reveal-delay-4" style="color:rgba(255,255,255,0.3);">
-      <span class="label-caps" style="font-size:0.6rem;letter-spacing:0.3em;">Scroll</span>
-      <div style="width:1px;height:3rem;background:linear-gradient(to bottom,rgba(255,255,255,0.3),transparent);"></div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal reveal-delay-4" style="color:rgba(255,255,255,.3);">
+      <span class="label-caps" style="font-size:.6rem;letter-spacing:.3em;">Scroll</span>
+      <div style="width:1px;height:3rem;background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent);"></div>
     </div>
   </div>
 </section>
 
 
 <!-- ══════ STATS ══════ -->
-<section class="bg-white py-14" style="border-bottom:1px solid rgba(26,53,112,0.08);">
+<section class="bg-white py-14" style="border-bottom:1px solid rgba(26,53,112,.08);">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
     <div class="reveal">
-      <div class="stat-number">25<span style="color:#c49a4a;font-size:60%;">+</span></div>
-      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:0.65rem;">Años de Experiencia</div>
+      <div class="stat-number">45<span style="color:#c49a4a;font-size:60%;">+</span></div>
+      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:.65rem;">Años de Trayectoria</div>
     </div>
     <div class="reveal reveal-delay-1">
-      <div class="stat-number">14</div>
-      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:0.65rem;">Jurisdicciones Activas</div>
+      <div class="stat-number">4</div>
+      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:.65rem;">Oficinas en Venezuela</div>
     </div>
     <div class="reveal reveal-delay-2">
-      <div class="stat-number">340<span style="color:#c49a4a;font-size:60%;">+</span></div>
-      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:0.65rem;">Procesos Ganados</div>
+      <div class="stat-number">8</div>
+      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:.65rem;">Áreas de Práctica</div>
     </div>
     <div class="reveal reveal-delay-3">
-      <div class="stat-number">$2<span style="color:#c49a4a;font-size:60%;">B</span></div>
-      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:0.65rem;">En Contratos Asesorados</div>
+      <div class="stat-number">2</div>
+      <div class="label-caps mt-2" style="color:#2d4d8a;font-size:.65rem;">Redes Jurídicas Globales</div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════ ÁREAS ══════ -->
+<!-- ══════ SOBRE LA FIRMA ══════ -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <div class="label-caps mb-4" style="color:#c49a4a;">Nuestra Historia</div>
+      <h2 class="display-xl mb-6" style="font-size:clamp(2rem,4vw,3rem);color:#0c1a40;line-height:1.1;">
+        Desde 1980 defendiendo<br/><em style="color:#c49a4a;">los intereses de sus clientes</em>
+      </h2>
+      <p class="text-gray-500 leading-relaxed mb-5" style="font-size:.95rem;">
+        Fundada por el <strong style="color:#1a3570;">Dr. Julio César González Arriojas</strong>, quien se asoció con uno de los más renombrados escritorios jurídicos de Barcelona, especializado en Derecho Penal y Civil en Venezuela.
+      </p>
+      <p class="text-gray-500 leading-relaxed mb-5" style="font-size:.95rem;">
+        Con el paso de los años, la firma amplió su práctica al Derecho Corporativo, Tributario, Laboral, Administrativo, Litigios y Arbitraje, consolidándose como una de las firmas de referencia en Venezuela.
+      </p>
+      <p class="text-gray-500 leading-relaxed mb-10" style="font-size:.95rem;">
+        Hoy contamos con oficinas propias en <strong style="color:#1a3570;">Caracas, Maracaibo, Valencia y Lechería</strong>, y una afiliada contable, <strong style="color:#1a3570;">A&G Contadores Asociados</strong>, que ofrece servicios de administración de empresas, agenciamiento aduanal y control fiscal.
+      </p>
+      <a href="#contacto" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        Hablar con un socio
+      </a>
+    </div>
+
+    <!-- Afiliaciones y oficinas -->
+    <div class="reveal reveal-delay-2 space-y-6">
+      <!-- Red internacional -->
+      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #c49a4a;">
+        <div class="label-caps mb-3" style="color:#c49a4a;font-size:.62rem;">Red Jurídica Global</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;">Club de Abogados &amp; TAG Law</div>
+        <p class="text-gray-500" style="font-size:.85rem;">Miembros de dos prestigiosas redes jurídicas internacionales, con cobertura en América Latina, Europa y el mundo.</p>
+      </div>
+      <!-- MERCOSUR -->
+      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #1a3570;">
+        <div class="label-caps mb-3" style="color:#1a3570;font-size:.62rem;">Cobertura Regional</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;">MERCOSUR + Europa</div>
+        <p class="text-gray-500" style="font-size:.85rem;">Alianzas estratégicas con escritorios jurídicos en los países miembros del MERCOSUR y principales plazas europeas.</p>
+      </div>
+      <!-- Afiliada -->
+      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #c49a4a;">
+        <div class="label-caps mb-3" style="color:#c49a4a;font-size:.62rem;">Empresa Afiliada</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;">A&amp;G Contadores Asociados</div>
+        <p class="text-gray-500" style="font-size:.85rem;">Servicios contables, administración de empresas, agenciamiento aduanal y control fiscal bajo un mismo techo.</p>
+      </div>
+      <!-- Oficinas -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="p-4 text-center" style="background:#0c1a40;"><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8d5a3;">Caracas</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.4);font-size:.55rem;">Sede Principal</div></div>
+        <div class="p-4 text-center" style="background:#1a3570;"><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8d5a3;">Maracaibo</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.4);font-size:.55rem;">Oficina Regional</div></div>
+        <div class="p-4 text-center" style="background:#1a3570;"><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8d5a3;">Valencia</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.4);font-size:.55rem;">Oficina Regional</div></div>
+        <div class="p-4 text-center" style="background:#0c1a40;"><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#e8d5a3;">Lechería</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.4);font-size:.55rem;">Oficina Regional</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════ ÁREAS DE PRÁCTICA ══════ -->
 <section id="areas" class="py-24" style="background:#f8f5ef;">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
     <div class="mb-16 reveal">
       <div class="label-caps mb-4" style="color:#c49a4a;">Especialización Legal</div>
-      <h2 class="display-xl" style="font-size:clamp(2rem,4.5vw,3.2rem);color:#0c1a40;max-width:560px;">Áreas de Práctica</h2>
-      <div class="gold-divider mt-6" style="width:5rem;opacity:0.5;"></div>
+      <h2 class="display-xl" style="font-size:clamp(2rem,4.5vw,3.2rem);color:#0c1a40;max-width:580px;">Áreas de Práctica</h2>
+      <div class="gold-divider mt-6" style="width:5rem;opacity:.5;"></div>
+      <p class="text-gray-500 mt-4" style="font-size:.9rem;max-width:520px;">Una práctica jurídica integral que cubre todas las necesidades legales de corporaciones, instituciones e individuos en Venezuela y el mundo.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Card 1 -->
-      <div class="practice-card p-10 reveal">
-        <div class="w-12 h-12 flex items-center justify-center mb-8" style="background:rgba(196,154,74,0.07);border:1px solid rgba(196,154,74,0.2);">
-          <!-- Landmark SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10h18M5 10V6l7-3 7 3v4M9 21v-6h2v6M13 21v-6h2v6"/></svg>
+      <!-- 1. Penal -->
+      <div class="practice-card p-8 reveal">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:rgba(196,154,74,.07);border:1px solid rgba(196,154,74,.2);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
-        <div class="label-caps mb-3" style="color:#c49a4a;font-size:0.62rem;">Práctica Principal</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:#0c1a40;margin-bottom:1rem;line-height:1.2;">Derecho Administrativo</h3>
-        <p class="text-gray-500 leading-relaxed mb-8" style="font-size:0.9rem;">Asesoría especializada en relaciones entre particulares y el Estado: actos administrativos, recursos, contratos públicos y procesos de impugnación ante organismos gubernamentales nacionales e internacionales.</p>
-        <ul class="space-y-2 mb-8">
-          <li class="flex items-center gap-2 text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Recursos y apelaciones</li>
-          <li class="flex items-center gap-2 text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Contratos con entes públicos</li>
-          <li class="flex items-center gap-2 text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Litigios administrativos</li>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Práctica Fundacional</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;line-height:1.2;">Derecho Penal</h3>
+        <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.85rem;">Defensa técnica rigurosa en delitos económicos, penales corporativos (Compliance), delitos contra la propiedad y litigación oral de alto nivel.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Delitos económicos y financieros</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compliance Penal Corporativo</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Fuero marítimo y aduanero</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:0.65rem;">Consultar área <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
-      <!-- Card 2 — highlighted -->
-      <div class="practice-card p-10 reveal reveal-delay-1" style="background:linear-gradient(160deg,#0c1a40,#1a3570);border:none;border-bottom:3px solid #c49a4a;">
-        <div class="w-12 h-12 flex items-center justify-center mb-8" style="background:rgba(196,154,74,0.15);border:1px solid rgba(196,154,74,0.3);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V19.5a2.25 2.25 0 002.25 2.25h.75"/></svg>
+      <!-- 2. Corporativo — destacado -->
+      <div class="practice-card p-8 reveal reveal-delay-1" style="background:linear-gradient(160deg,#0c1a40,#1a3570);border:none;border-bottom:3px solid #c49a4a;">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:rgba(196,154,74,.15);border:1px solid rgba(196,154,74,.3);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
         </div>
-        <div class="label-caps mb-3" style="color:#c49a4a;font-size:0.62rem;">Especialidad Flagship</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:#fff;margin-bottom:1rem;line-height:1.2;">Licitaciones Internacionales</h3>
-        <p class="leading-relaxed mb-8" style="font-size:0.9rem;color:rgba(255,255,255,0.6);">Acompañamiento integral en procesos de licitación pública y privada a nivel multinacional. Preparación de pliegos, impugnaciones, alianzas estratégicas y negociación con organismos multilaterales.</p>
-        <ul class="space-y-2 mb-8">
-          <li class="flex items-center gap-2 text-sm" style="color:rgba(255,255,255,0.55);"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> BID, Banco Mundial, ONU</li>
-          <li class="flex items-center gap-2 text-sm" style="color:rgba(255,255,255,0.55);"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Licitaciones gubernamentales</li>
-          <li class="flex items-center gap-2 text-sm" style="color:rgba(255,255,255,0.55);"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Joint ventures internacionales</li>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Especialidad Corporativa</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:#fff;margin-bottom:.75rem;line-height:1.2;">Derecho Corporativo y Mercantil</h3>
+        <p class="leading-relaxed mb-6" style="font-size:.85rem;color:rgba(255,255,255,.6);">Soluciones jurídicas integrales para el ciclo de vida comercial: constitución, contratos, gobierno corporativo, Due Diligence y reestructuración.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs" style="color:rgba(255,255,255,.55);"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Constitución de sociedades (S.A., S.R.L., EAS)</li>
+          <li class="flex items-center gap-2 text-xs" style="color:rgba(255,255,255,.55);"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Fusiones, adquisiciones y Due Diligence</li>
+          <li class="flex items-center gap-2 text-xs" style="color:rgba(255,255,255,.55);"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Gobierno corporativo y pactos de socios</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:0.65rem;">Consultar área <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
-      <!-- Card 3 -->
-      <div class="practice-card p-10 reveal reveal-delay-2">
-        <div class="w-12 h-12 flex items-center justify-center mb-8" style="background:rgba(196,154,74,0.07);border:1px solid rgba(196,154,74,0.2);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+      <!-- 3. Hidrocarburos -->
+      <div class="practice-card p-8 reveal reveal-delay-2">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:rgba(196,154,74,.07);border:1px solid rgba(196,154,74,.2);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/></svg>
         </div>
-        <div class="label-caps mb-3" style="color:#c49a4a;font-size:0.62rem;">Alta Consultoría</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:#0c1a40;margin-bottom:1rem;line-height:1.2;">Consultoría Corporativa</h3>
-        <p class="text-gray-500 leading-relaxed mb-8" style="font-size:0.9rem;">Estructuración legal de empresas, fusiones y adquisiciones transfronterizas, gobierno corporativo y cumplimiento normativo internacional para grupos empresariales de gran envergadura.</p>
-        <ul class="space-y-2 mb-8">
-          <li class="flex items-center gap-2 text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> M&amp;A transfronterizo</li>
-          <li class="flex items-center gap-2 text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Gobierno corporativo</li>
-          <li class="flex items-center gap-2 text-sm text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compliance global</li>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Sector Energético</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;line-height:1.2;">Hidrocarburos y Contratos PDVSA</h3>
+        <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.85rem;">Asesoría de alta gama en contratos con PDVSA, Empresas Mixtas, licitaciones y administración de contratos de alta complejidad.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Ley Orgánica de Hidrocarburos</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Contract Management y Claims</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compliance internacional y sanciones</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:0.65rem;">Consultar área <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <!-- 4. Constitucional -->
+      <div class="practice-card p-8 reveal">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:rgba(196,154,74,.07);border:1px solid rgba(196,154,74,.2);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        </div>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Máxima Instancia</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;line-height:1.2;">Derecho Constitucional</h3>
+        <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.85rem;">Acciones de inconstitucionalidad, amparos, hábeas corpus, control de convencionalidad y representación ante la CIDH.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Amparo constitucional urgente</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> CIDH y Corte IDH</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Blindaje patrimonial corporativo</li>
+        </ul>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <!-- 5. Inmobiliario -->
+      <div class="practice-card p-8 reveal reveal-delay-1">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:rgba(196,154,74,.07);border:1px solid rgba(196,154,74,.2);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+        </div>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Patrimonio Inmobiliario</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;line-height:1.2;">Derecho Inmobiliario Venezuela</h3>
+        <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.85rem;">Arrendamientos comerciales y de vivienda, gestión ante SUNAVI/SUNDDE, desalojos, condominios y preventas inmobiliarias.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Contratos multidivisa</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tramitación ante SUNAVI</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Due Diligence registral</li>
+        </ul>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <!-- 6. Laboral / Tributario / Civil -->
+      <div class="practice-card p-8 reveal reveal-delay-2">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:rgba(196,154,74,.07);border:1px solid rgba(196,154,74,.2);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.97zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.97z"/></svg>
+        </div>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Práctica Integral</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;line-height:1.2;">Laboral, Tributario y Civil</h3>
+        <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.85rem;">Asesoría integral en derecho laboral, tributario y civil. Litigios, arbitraje y resolución alternativa de conflictos para empresas y personas.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Derecho Laboral y Previsional</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Planificación fiscal y tributaria</li>
+          <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Arbitraje y mediación</li>
+        </ul>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
     </div>
@@ -397,44 +415,48 @@
 
 
 <!-- ══════ EQUIPO ══════ -->
-<section class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
-    <div class="reveal">
-      <div class="label-caps mb-4" style="color:#c49a4a;">Nuestra Identidad</div>
-      <h2 class="display-xl mb-6" style="font-size:clamp(2rem,4vw,3rem);color:#0c1a40;line-height:1.1;">
-        Raíces venezolanas.<br/><em style="color:#c49a4a;">Alcance mundial.</em>
-      </h2>
-      <p class="text-gray-500 leading-relaxed mb-6" style="font-size:0.95rem;">Fundado por abogados venezolanos con formación internacional en las principales casas de estudio de Europa y América del Norte, nuestro estudio combina el rigor del derecho continental latinoamericano con el pragmatismo del common law anglosajón.</p>
-      <p class="text-gray-500 leading-relaxed mb-10" style="font-size:0.95rem;">Operamos en más de 14 jurisdicciones, con alianzas estratégicas con firmas de primer nivel en Madrid, Miami, Dubai, Londres y Ciudad de México.</p>
-      <div class="flex flex-wrap items-center gap-6">
-        <a href="#contacto" class="btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-          Hablar con un socio
-        </a>
-        <a href="#areas" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:0.68rem;">Ver prácticas <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
+<section id="equipo" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="mb-14 reveal">
+      <div class="label-caps mb-4" style="color:#c49a4a;">Nuestros Profesionales</div>
+      <h2 class="display-xl" style="font-size:clamp(2rem,4.5vw,3rem);color:#0c1a40;">El Equipo</h2>
+      <div class="gold-divider mt-5" style="width:5rem;opacity:.5;"></div>
     </div>
 
-    <div class="reveal reveal-delay-2 grid grid-cols-2 gap-4">
-      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #c49a4a;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5" class="mb-4"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/></svg>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:#0c1a40;margin-bottom:0.5rem;">Legal 500</div>
-        <p class="text-gray-500" style="font-size:0.8rem;">Reconocidos como firma recomendada en práctica de licitaciones regionales.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Fundador -->
+      <div class="team-card reveal" style="border-top:3px solid #c49a4a;">
+        <div class="team-avatar">JG</div>
+        <div class="label-caps mb-1" style="color:#c49a4a;font-size:.58rem;">Socio Fundador</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:#0c1a40;margin-bottom:.35rem;">Dr. Julio César González Arriojas</div>
+        <div class="label-caps mb-4" style="color:#2d4d8a;font-size:.6rem;">Fundador · Derecho Penal &amp; Civil</div>
+        <p class="text-gray-500 leading-relaxed" style="font-size:.82rem;">Fundó la firma en 1980 tras su asociación con uno de los más reconocidos escritorios jurídicos de Barcelona. Pionero del ejercicio jurídico en Venezuela con más de cuatro décadas de trayectoria.</p>
       </div>
-      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #1a3570;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#1a3570" stroke-width="1.5" class="mb-4"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:#0c1a40;margin-bottom:0.5rem;">IBA Member</div>
-        <p class="text-gray-500" style="font-size:0.8rem;">Miembros activos de la Asociación Internacional de Abogados.</p>
+
+      <!-- César González Toro -->
+      <div class="team-card reveal reveal-delay-1" style="border-top:3px solid #1a3570;">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#c49a4a,#8b6328);">CG</div>
+        <div class="label-caps mb-1" style="color:#c49a4a;font-size:.58rem;">Socio Senior</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:#0c1a40;margin-bottom:.35rem;">Dr. César González Toro</div>
+        <div class="label-caps mb-4" style="color:#2d4d8a;font-size:.6rem;">Derecho Penal · Compliance · Derechos Humanos</div>
+        <p class="text-gray-500 leading-relaxed" style="font-size:.82rem;">Maestría en Defensa de la Nación. Especialista en Derecho Penal, Compliance Corporativo y Defensa de Derechos Fundamentales. Experto en litigación oral de alta complejidad y estrategia forense avanzada.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs" style="background:#f8f5ef;color:#1a3570;border:1px solid rgba(26,53,112,.1);">Derecho Penal</span>
+          <span class="px-2 py-1 text-xs" style="background:#f8f5ef;color:#1a3570;border:1px solid rgba(26,53,112,.1);">Compliance</span>
+          <span class="px-2 py-1 text-xs" style="background:#f8f5ef;color:#1a3570;border:1px solid rgba(26,53,112,.1);">DDHH</span>
+        </div>
       </div>
-      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #1a3570;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#1a3570" stroke-width="1.5" class="mb-4"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:#0c1a40;margin-bottom:0.5rem;">ISO Compliance</div>
-        <p class="text-gray-500" style="font-size:0.8rem;">Procesos internos certificados bajo estándares internacionales de gestión.</p>
-      </div>
-      <div class="p-7" style="background:#f8f5ef;border-left:3px solid #c49a4a;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5" class="mb-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:#0c1a40;margin-bottom:0.5rem;">18 Socios</div>
-        <p class="text-gray-500" style="font-size:0.8rem;">Equipo multidisciplinario con posgrados en Harvard, IE, y Sciences Po.</p>
+
+      <!-- Equipo -->
+      <div class="team-card reveal reveal-delay-2" style="border-top:3px solid #c49a4a;background:#f8f5ef;">
+        <div class="w-11 h-11 flex items-center justify-center mb-6" style="background:#fff;border:1px solid rgba(196,154,74,.3);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+        </div>
+        <div class="label-caps mb-2" style="color:#c49a4a;font-size:.6rem;">Equipo Multidisciplinario</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:#0c1a40;margin-bottom:.75rem;">Asociados &amp; Especialistas</div>
+        <p class="text-gray-500 leading-relaxed mb-4" style="font-size:.82rem;">Un equipo de abogados especializados en todas las ramas del derecho, con experiencia en las cuatro oficinas venezolanas y aliados internacionales en MERCOSUR y Europa.</p>
+        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Contactar al equipo <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
   </div>
@@ -447,70 +469,55 @@
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
       <div class="reveal">
-        <div class="label-caps mb-5" style="color:#c49a4a;">Canal de Difusión</div>
+        <div class="label-caps mb-5" style="color:#c49a4a;">Canal de Difusión Jurídica</div>
         <h2 class="display-xl text-white mb-6" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;">
-          Lex Universalis<br/><em style="color:#c49a4a;">Podcast</em>
+          González Morgan<br/><em style="color:#c49a4a;">Podcast Legal</em>
         </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.55);font-size:0.95rem;">Análisis profundo de la actualidad jurídica internacional, regulaciones emergentes, licitaciones estratégicas y tendencias en el derecho corporativo global. Un recurso esencial para ejecutivos, asesores y líderes institucionales.</p>
+        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,.55);font-size:.95rem;">Análisis profundo de la actualidad jurídica venezolana e internacional: derecho de hidrocarburos, litigación penal, contratación pública, compliance y tendencias corporativas. Un recurso esencial para ejecutivos, asesores y empresarios.</p>
         <div class="flex flex-wrap gap-4">
           <a href="https://spotify.com" target="_blank" rel="noopener" class="btn-primary">
-            <!-- Spotify logo SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 168 168"><path fill="#fff" d="M84 0C37.6 0 0 37.6 0 84s37.6 84 84 84 84-37.6 84-84S130.4 0 84 0zm38.6 121.2c-1.5 2.5-4.8 3.3-7.3 1.8-20-12.2-45.1-15-74.8-8.2-2.9.7-5.7-1.1-6.4-3.9-.7-2.9 1.1-5.7 3.9-6.4 32.4-7.4 60.2-4.2 82.6 9.5 2.5 1.4 3.3 4.7 2 7.2zm10.3-22.9c-1.9 3.1-6 4.1-9.1 2.2-22.9-14.1-57.8-18.1-84.9-9.9-3.5 1.1-7.2-.9-8.3-4.4-1.1-3.5.9-7.2 4.4-8.3 30.9-9.4 69.4-4.8 95.7 11.3 3.1 1.9 4.1 6 2.2 9.1zm.9-23.8c-27.5-16.3-72.9-17.8-99.2-9.8-4.2 1.3-8.6-1.1-9.9-5.3-1.3-4.2 1.1-8.6 5.3-9.9 30.2-9.2 80.4-7.4 112.2 11.3 3.8 2.3 5 7.2 2.8 11-2.2 3.7-7.2 5-11.2 2.7z"/></svg>
             Escuchar en Spotify
           </a>
           <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="btn-outline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164.7-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-42.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.4 130.3-317 255.3-317 n71.6 0 131.1 46.9 176.7 46.9 43.2 0 113.2-49.5 195.8-49.5 31.5 0 124.3 3.6 187.3 137.7zM540.9 162.7c25.2-31.5 43.4-76.5 43.4-121.5 0-6.4-.5-12.8-1.4-18.6-41.8 1.5-92.2 27.7-124.2 64.2-22.3 25.2-43.5 70.1-43.5 115.1 0 7.2.9 14.4 2.2 21.2 4.2.7 8.7 1.1 13.2 1.1 37.5.1 84.8-24.4 110.3-61.5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164.7-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-42.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.4 130.3-317 255.3-317 71.6 0 131.1 46.9 176.7 46.9 43.2 0 113.2-49.5 195.8-49.5 31.5 0 124.3 3.6 187.3 137.7zM540.9 162.7c25.2-31.5 43.4-76.5 43.4-121.5 0-6.4-.5-12.8-1.4-18.6-41.8 1.5-92.2 27.7-124.2 64.2-22.3 25.2-43.5 70.1-43.5 115.1 0 7.2.9 14.4 2.2 21.2 4.2.7 8.7 1.1 13.2 1.1 37.5.1 84.8-24.4 110.3-61.5z"/></svg>
             Apple Podcasts
           </a>
         </div>
       </div>
 
       <div class="reveal reveal-delay-2">
-        <div class="mb-6 p-6 rounded-sm" style="background:rgba(255,255,255,0.04);border:1px solid rgba(196,154,74,0.15);">
-          <div class="label-caps mb-4" style="color:rgba(255,255,255,0.35);font-size:0.6rem;">Episodio Más Reciente — EP. 47</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#fff;margin-bottom:0.5rem;line-height:1.2;">El nuevo paradigma de las licitaciones post-pandemia en América Latina</div>
-          <div class="label-caps" style="color:#c49a4a;font-size:0.62rem;">Dr. Alejandro Ríos · 52 min</div>
+        <div class="mb-6 p-6 rounded-sm" style="background:rgba(255,255,255,.04);border:1px solid rgba(196,154,74,.15);">
+          <div class="label-caps mb-4" style="color:rgba(255,255,255,.35);font-size:.6rem;">Episodio Más Reciente — EP. 12</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#fff;margin-bottom:.5rem;line-height:1.2;">Contratos con PDVSA en 2026: riesgos jurídicos, sanciones internacionales y estrategias de compliance</div>
+          <div class="label-caps" style="color:#c49a4a;font-size:.6rem;">Dr. César González Toro · 48 min</div>
         </div>
-
-        <div class="p-6 rounded-sm" style="background:rgba(255,255,255,0.06);border:1px solid rgba(196,154,74,0.12);backdrop-filter:blur(10px);">
-          <div class="waveform mb-5" id="waveform">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-          <div class="progress-bar mb-4" id="progress-bar" onclick="seekAudio(event,this)">
-            <div class="progress-fill" id="progress-fill"></div>
-          </div>
+        <div class="p-6 rounded-sm" style="background:rgba(255,255,255,.06);border:1px solid rgba(196,154,74,.12);backdrop-filter:blur(10px);">
+          <div class="waveform mb-5" id="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-bar mb-4" id="progress-bar" onclick="seekAudio(event,this)"><div class="progress-fill" id="progress-fill"></div></div>
           <div class="flex justify-between mb-5">
-            <span class="label-caps" id="current-time" style="color:rgba(255,255,255,0.4);font-size:0.6rem;">18:12</span>
-            <span class="label-caps" style="color:rgba(255,255,255,0.4);font-size:0.6rem;">52:00</span>
+            <span class="label-caps" id="current-time" style="color:rgba(255,255,255,.4);font-size:.6rem;">16:48</span>
+            <span class="label-caps" style="color:rgba(255,255,255,.4);font-size:.6rem;">48:00</span>
           </div>
           <div class="flex items-center justify-center gap-6">
-            <button onclick="skipBack()" title="Retroceder 15s" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.4);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-5.11"/><text x="8" y="17" font-size="5" fill="currentColor" stroke="none" font-family="sans-serif">15</text></svg>
+            <button onclick="skipBack()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-5.11"/></svg>
             </button>
-            <button id="play-btn" onclick="togglePlay()" style="width:3.5rem;height:3.5rem;border-radius:50%;background:linear-gradient(135deg,#c49a4a,#a67c35);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(196,154,74,0.3);transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <button id="play-btn" onclick="togglePlay()" style="width:3.5rem;height:3.5rem;border-radius:50%;background:linear-gradient(135deg,#c49a4a,#a67c35);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(196,154,74,.3);transition:transform .2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
               <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </button>
-            <button onclick="skipForward()" title="Avanzar 15s" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.4);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+            <button onclick="skipForward()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-5.11"/></svg>
             </button>
           </div>
         </div>
-
         <div class="mt-4 space-y-2">
-          <div class="flex items-center justify-between px-4 py-3 rounded-sm cursor-pointer" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);">
-            <div>
-              <div class="text-sm" style="color:rgba(255,255,255,0.7);">EP.46 · Arbitraje internacional en contratos de Estado</div>
-              <div class="label-caps mt-1" style="color:rgba(255,255,255,0.3);font-size:0.58rem;">48 min</div>
-            </div>
+          <div class="flex items-center justify-between px-4 py-3 cursor-pointer" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);">
+            <div><div class="text-sm" style="color:rgba(255,255,255,.7);">EP.11 · Amparo constitucional: cuándo es el recurso correcto</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.3);font-size:.58rem;">44 min</div></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
-          <div class="flex items-center justify-between px-4 py-3 rounded-sm cursor-pointer" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);">
-            <div>
-              <div class="text-sm" style="color:rgba(255,255,255,0.7);">EP.45 · Compliance corporativo en economías emergentes</div>
-              <div class="label-caps mt-1" style="color:rgba(255,255,255,0.3);font-size:0.58rem;">41 min</div>
-            </div>
+          <div class="flex items-center justify-between px-4 py-3 cursor-pointer" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);">
+            <div><div class="text-sm" style="color:rgba(255,255,255,.7);">EP.10 · Due Diligence en adquisiciones corporativas venezolanas</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.3);font-size:.58rem;">52 min</div></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
         </div>
@@ -528,46 +535,37 @@
         <div class="label-caps mb-4" style="color:#c49a4a;">Publicaciones &amp; Análisis</div>
         <h2 class="display-xl" style="font-size:clamp(2rem,4.5vw,3rem);color:#0c1a40;">Actualidad Jurídica</h2>
       </div>
-      <a href="#" class="label-caps flex items-center gap-2 self-start" style="color:#1a3570;font-size:0.68rem;">Ver todos los artículos <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#" class="label-caps flex items-center gap-2 self-start" style="color:#1a3570;font-size:.68rem;">Ver todos los artículos <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="grid md:grid-cols-3 gap-8">
 
       <article class="blog-card reveal">
-        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&q=75" alt="Sede del Banco Mundial" loading="lazy"/></div>
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=75" alt="Tribunal Supremo" loading="lazy"/></div>
         <div class="p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="label-caps px-2 py-1 rounded-sm" style="color:#fff;background:#1a3570;font-size:0.58rem;">Licitaciones</span>
-            <span class="text-xs text-gray-400">12 May 2026</span>
-          </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#0c1a40;line-height:1.25;margin-bottom:0.75rem;">Las nuevas directrices del BID para contratos de infraestructura en LatAm</h3>
-          <p class="text-gray-500 leading-relaxed mb-6" style="font-size:0.85rem;">Analizamos los cambios sustantivos introducidos en el marco normativo del Banco Interamericano de Desarrollo para proyectos de gran escala.</p>
-          <a href="#" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:0.62rem;">Leer análisis <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex items-center gap-3 mb-4"><span class="label-caps px-2 py-1" style="color:#fff;background:#0c1a40;font-size:.56rem;">Derecho Penal</span><span class="text-xs text-gray-400">15 May 2026</span></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#0c1a40;line-height:1.25;margin-bottom:.75rem;">Compliance penal corporativo: cómo blindar a sus directivos ante la ley venezolana</h3>
+          <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.84rem;">Analizamos los nuevos riesgos penales para directores y síndicos en Venezuela, y las mejores prácticas para implementar programas de cumplimiento normativo.</p>
+          <a href="#" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:.6rem;">Leer análisis <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </article>
 
       <article class="blog-card reveal reveal-delay-1">
-        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=75" alt="Ejecutivos en reunión" loading="lazy"/></div>
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=75" alt="Reunión corporativa" loading="lazy"/></div>
         <div class="p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="label-caps px-2 py-1 rounded-sm" style="color:#fff;background:#c49a4a;font-size:0.58rem;">Corporativo</span>
-            <span class="text-xs text-gray-400">03 May 2026</span>
-          </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#0c1a40;line-height:1.25;margin-bottom:0.75rem;">Fusiones transfronterizas en 2026: régimen tributario y riesgos regulatorios</h3>
-          <p class="text-gray-500 leading-relaxed mb-6" style="font-size:0.85rem;">Revisión del entorno regulatorio para operaciones de M&amp;A en múltiples jurisdicciones, con foco en Latinoamérica y Europa.</p>
-          <a href="#" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:0.62rem;">Leer análisis <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex items-center gap-3 mb-4"><span class="label-caps px-2 py-1" style="color:#fff;background:#c49a4a;font-size:.56rem;">Hidrocarburos</span><span class="text-xs text-gray-400">08 May 2026</span></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#0c1a40;line-height:1.25;margin-bottom:.75rem;">Sanciones internacionales y contratos con PDVSA: riesgos y estrategias de mitigación en 2026</h3>
+          <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.84rem;">Revisión del panorama regulatorio actual para empresas con contratos vigentes en el sector energético venezolano.</p>
+          <a href="#" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:.6rem;">Leer análisis <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </article>
 
       <article class="blog-card reveal reveal-delay-2">
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=75" alt="Documentos legales" loading="lazy"/></div>
         <div class="p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="label-caps px-2 py-1 rounded-sm" style="color:#fff;background:#2d4d8a;font-size:0.58rem;">Administrativo</span>
-            <span class="text-xs text-gray-400">28 Abr 2026</span>
-          </div>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#0c1a40;line-height:1.25;margin-bottom:0.75rem;">Reforma al procedimiento administrativo en Venezuela: impacto para empresas</h3>
-          <p class="text-gray-500 leading-relaxed mb-6" style="font-size:0.85rem;">Examinamos las modificaciones recientes al procedimiento administrativo y sus implicaciones prácticas para operadores privados.</p>
-          <a href="#" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:0.62rem;">Leer análisis <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex items-center gap-3 mb-4"><span class="label-caps px-2 py-1" style="color:#fff;background:#2d4d8a;font-size:.56rem;">Inmobiliario</span><span class="text-xs text-gray-400">30 Abr 2026</span></div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#0c1a40;line-height:1.25;margin-bottom:.75rem;">Arrendamientos en Venezuela 2026: cánones en divisas, SUNAVI y nuevas sentencias del TSJ</h3>
+          <p class="text-gray-500 leading-relaxed mb-6" style="font-size:.84rem;">Guía práctica sobre el estado actual del derecho inquilinario venezolano, estructuración de contratos multidivisa y gestión ante organismos regulatorios.</p>
+          <a href="#" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:.6rem;">Leer análisis <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </article>
 
@@ -579,12 +577,12 @@
 <!-- ══════ CTA BAND ══════ -->
 <section class="py-20" style="background:linear-gradient(135deg,#0c1a40,#1a3570);">
   <div class="max-w-4xl mx-auto px-6 text-center reveal">
-    <div class="label-caps mb-5" style="color:#c49a4a;font-size:0.65rem;">¿Tiene un caso complejo?</div>
-    <h2 class="display-xl text-white mb-6" style="font-size:clamp(1.8rem,4vw,3rem);">Su desafío legal merece<br/>experiencia de primer nivel</h2>
-    <p class="mb-10" style="color:rgba(255,255,255,0.55);font-size:0.95rem;max-width:500px;margin:0 auto 2.5rem;">Contáctenos hoy para una consulta inicial con uno de nuestros socios principales. Sin compromiso.</p>
-    <a href="#contacto" class="btn-primary" style="font-size:0.8rem;padding:1rem 2.5rem;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Agendar Consulta Internacional
+    <div class="label-caps mb-5" style="color:#c49a4a;font-size:.65rem;">¿Emergencia legal o caso complejo?</div>
+    <h2 class="display-xl text-white mb-6" style="font-size:clamp(1.8rem,4vw,3rem);">En derecho, cada hora cuenta.<br/><em style="color:#c49a4a;">Actúe con los mejores.</em></h2>
+    <p class="mb-10" style="color:rgba(255,255,255,.55);font-size:.95rem;max-width:500px;margin:0 auto 2.5rem;">Más de 45 años de experiencia resolviendo los casos más complejos. Respuesta en menos de 24 horas hábiles. Absoluta confidencialidad garantizada.</p>
+    <a href="#contacto" class="btn-primary" style="font-size:.8rem;padding:1rem 2.5rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Solicitar Consulta Urgente
     </a>
   </div>
 </section>
@@ -596,115 +594,82 @@
 
     <div class="reveal">
       <div class="label-caps mb-4" style="color:#c49a4a;">Estamos para Asistirle</div>
-      <h2 class="display-xl mb-8" style="font-size:clamp(2rem,4vw,3rem);color:#0c1a40;line-height:1.1;">
-        Iniciar una<br/>Consulta Global
-      </h2>
-      <p class="text-gray-500 leading-relaxed mb-10" style="font-size:0.95rem;max-width:440px;">Nuestro equipo responde en menos de 24 horas hábiles. La información que comparta es estrictamente confidencial y amparada por el secreto profesional.</p>
+      <h2 class="display-xl mb-8" style="font-size:clamp(2rem,4vw,3rem);color:#0c1a40;line-height:1.1;">Consulta<br/>Confidencial</h2>
+      <p class="text-gray-500 leading-relaxed mb-10" style="font-size:.95rem;max-width:440px;">Nuestro equipo responde en menos de 24 horas hábiles. Toda información compartida está protegida por el secreto profesional del abogado.</p>
 
       <div class="space-y-6">
         <div class="flex items-start gap-4">
-          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center" style="background:#f8f5ef;border:1px solid rgba(196,154,74,0.2);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center" style="background:#f8f5ef;border:1px solid rgba(196,154,74,.2);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
           </div>
           <div>
-            <div class="label-caps mb-1" style="color:#1a3570;font-size:0.62rem;">Oficina Principal</div>
-            <div class="text-gray-600 text-sm">Torre Empresarial Ávila, Piso 18<br/>Caracas, Venezuela</div>
+            <div class="label-caps mb-1" style="color:#1a3570;font-size:.6rem;">Sede Principal</div>
+            <div class="text-gray-600 text-sm">Caracas, Venezuela</div>
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center" style="background:#f8f5ef;border:1px solid rgba(196,154,74,0.2);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center" style="background:#f8f5ef;border:1px solid rgba(196,154,74,.2);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div>
-            <div class="label-caps mb-1" style="color:#1a3570;font-size:0.62rem;">Correo Electrónico</div>
-            <div class="text-gray-600 text-sm">contacto@lexuniversalis.law</div>
+            <div class="label-caps mb-1" style="color:#1a3570;font-size:.6rem;">Correo Electrónico</div>
+            <div class="text-gray-600 text-sm">contacto@gonzalezmorgan.law</div>
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center" style="background:#f8f5ef;border:1px solid rgba(196,154,74,0.2);">
-            <!-- WhatsApp SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="#c49a4a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center" style="background:#f8f5ef;border:1px solid rgba(196,154,74,.2);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#c49a4a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </div>
           <div>
-            <div class="label-caps mb-1" style="color:#1a3570;font-size:0.62rem;">WhatsApp Corporativo</div>
-            <div class="text-gray-600 text-sm">+1 (786) 555-0192</div>
+            <div class="label-caps mb-1" style="color:#1a3570;font-size:.6rem;">WhatsApp Urgencias</div>
+            <div class="text-gray-600 text-sm">Disponible para consultas urgentes</div>
           </div>
         </div>
       </div>
 
-      <div class="mt-12 pt-8" style="border-top:1px solid rgba(26,53,112,0.08);">
-        <div class="label-caps mb-4" style="color:#1a3570;font-size:0.62rem;">Presencia Internacional</div>
+      <div class="mt-10 pt-8" style="border-top:1px solid rgba(26,53,112,.08);">
+        <div class="label-caps mb-4" style="color:#1a3570;font-size:.6rem;">Oficinas Venezuela</div>
         <div class="flex flex-wrap gap-3">
-          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,0.07);">🇻🇪 Caracas</span>
-          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,0.07);">🇺🇸 Miami</span>
-          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,0.07);">🇪🇸 Madrid</span>
-          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,0.07);">🇦🇪 Dubai</span>
-          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,0.07);">🇬🇧 Londres</span>
-          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,0.07);">🇲🇽 CDMX</span>
+          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">🇻🇪 Caracas</span>
+          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">🇻🇪 Maracaibo</span>
+          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">🇻🇪 Valencia</span>
+          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">🇻🇪 Lechería</span>
+          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">🌎 MERCOSUR</span>
+          <span class="px-3 py-1.5 text-xs text-gray-600" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">🇪🇸 Europa</span>
         </div>
       </div>
     </div>
 
-    <!-- FORM — integrado con Formspree -->
+    <!-- FORM -->
     <div class="reveal reveal-delay-2">
-      <div class="p-10 rounded-sm" style="background:#fdfcf9;border:1px solid rgba(26,53,112,0.08);box-shadow:0 20px 60px rgba(7,14,40,0.06);">
+      <div class="p-10 rounded-sm" style="background:#fdfcf9;border:1px solid rgba(26,53,112,.08);box-shadow:0 20px 60px rgba(7,14,40,.06);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#0c1a40;margin-bottom:2rem;">Formulario de Consulta</div>
-
         <!--
-          ════════════════════════════════════════════════
-          FORMSPREE: Reemplaza YOUR_FORM_ID con el ID
-          que te dan al registrarte en formspree.io
+          FORMSPREE: Reemplaza YOUR_FORM_ID con tu ID de formspree.io
           Ejemplo: action="https://formspree.io/f/xpzgkdva"
-          ════════════════════════════════════════════════
         -->
-        <form id="contact-form"
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              onsubmit="handleSubmit(event)">
-
-          <!-- Campo oculto: subject del email que recibirá el cliente -->
-          <input type="hidden" name="_subject" value="Nueva consulta desde Lex Universalis">
-          <!-- Redirigir a la misma página tras envío (Formspree lo ignora si usamos AJAX) -->
-          <input type="hidden" name="_next" value="">
-
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_subject" value="Nueva consulta desde González Morgan & Asociados">
           <div class="grid sm:grid-cols-2 gap-5 mb-5">
-            <div class="form-group">
-              <label for="nombre">Nombre Completo</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ej. María Rodríguez" required />
-            </div>
-            <div class="form-group">
-              <label for="empresa">Empresa / Institución</label>
-              <input type="text" id="empresa" name="empresa" placeholder="Ej. Grupo Energético S.A." />
-            </div>
+            <div class="form-group"><label for="nombre">Nombre Completo</label><input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Pérez" required /></div>
+            <div class="form-group"><label for="empresa">Empresa / Institución</label><input type="text" id="empresa" name="empresa" placeholder="Ej. Grupo Industrial S.A." /></div>
           </div>
           <div class="grid sm:grid-cols-2 gap-5 mb-5">
-            <div class="form-group">
-              <label for="email">Correo Electrónico</label>
-              <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
-            </div>
-            <div class="form-group">
-              <label for="pais">País de Operación</label>
-              <select id="pais" name="pais">
-                <option value="">Seleccionar...</option>
-                <option>Venezuela</option>
-                <option>Estados Unidos</option>
-                <option>España</option>
-                <option>México</option>
-                <option>Colombia</option>
-                <option>Emiratos Árabes Unidos</option>
-                <option>Otro</option>
-              </select>
-            </div>
+            <div class="form-group"><label for="email">Correo Electrónico</label><input type="email" id="email" name="email" placeholder="correo@empresa.com" required /></div>
+            <div class="form-group"><label for="telefono">Teléfono / WhatsApp</label><input type="tel" id="telefono" name="telefono" placeholder="+58 412 000 0000" /></div>
           </div>
           <div class="form-group mb-5">
             <label for="area">Área de Consulta</label>
             <select id="area" name="area">
               <option value="">Seleccionar área legal...</option>
-              <option>Derecho Administrativo</option>
-              <option>Licitaciones Internacionales</option>
-              <option>Consultoría Corporativa</option>
-              <option>M&amp;A y Fusiones</option>
-              <option>Arbitraje Internacional</option>
+              <option>Derecho Penal</option>
+              <option>Derecho Corporativo y Mercantil</option>
+              <option>Hidrocarburos y Contratos PDVSA</option>
+              <option>Derecho Constitucional</option>
+              <option>Derecho Inmobiliario / Inquilinato</option>
+              <option>Derecho Laboral</option>
+              <option>Derecho Tributario</option>
+              <option>Litigios y Arbitraje</option>
               <option>Otro</option>
             </select>
           </div>
@@ -714,16 +679,12 @@
           </div>
           <div class="flex items-start gap-3 mb-7">
             <input type="checkbox" id="confidencial" name="confidencial" style="margin-top:4px;accent-color:#c49a4a;" required />
-            <label for="confidencial" class="text-gray-500 leading-relaxed cursor-pointer" style="font-size:0.8rem;font-weight:400;letter-spacing:0;text-transform:none;">
-              Comprendo que la información compartida es estrictamente confidencial y está protegida por el secreto profesional del abogado.
-            </label>
+            <label for="confidencial" class="text-gray-500 leading-relaxed cursor-pointer" style="font-size:.8rem;font-weight:400;letter-spacing:0;text-transform:none;">Comprendo que la información compartida es estrictamente confidencial y está protegida por el secreto profesional del abogado.</label>
           </div>
-
           <button type="submit" id="submit-btn" class="btn-primary" style="width:100%;justify-content:center;padding:1rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Enviar Consulta Confidencial
           </button>
-
           <div id="form-status"></div>
         </form>
       </div>
@@ -735,226 +696,147 @@
 <!-- ══════ FOOTER ══════ -->
 <footer id="footer">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="py-14 grid md:grid-cols-4 gap-10" style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="py-14 grid md:grid-cols-4 gap-10" style="border-bottom:1px solid rgba(255,255,255,.06);">
 
       <div class="md:col-span-1">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-8 h-8 border flex items-center justify-center flex-shrink-0" style="border-color:#c49a4a;">
-            <span style="color:#c49a4a;font-family:'Cormorant Garamond',serif;font-weight:600;">L</span>
+          <div class="w-9 h-9 border flex items-center justify-center flex-shrink-0" style="border-color:#c49a4a;">
+            <span style="color:#c49a4a;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;">GM</span>
           </div>
           <div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#fff;letter-spacing:0.06em;">LEX UNIVERSALIS</div>
-            <div class="label-caps" style="color:#c49a4a;font-size:0.55rem;">Estudio Jurídico Internacional</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#fff;letter-spacing:.06em;">GONZÁLEZ MORGAN</div>
+            <div class="label-caps" style="color:#c49a4a;font-size:.52rem;">&amp; Asociados · Est. 1980</div>
           </div>
         </div>
-        <p class="leading-relaxed mb-6" style="font-size:0.82rem;color:rgba(255,255,255,0.4);">Excelencia jurídica con alcance global desde Caracas, Venezuela.</p>
-        <div class="flex gap-4">
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        <p class="leading-relaxed mb-6" style="font-size:.82rem;color:rgba(255,255,255,.4);">Más de 45 años de excelencia jurídica desde Venezuela para el mundo.</p>
+        <div class="flex gap-3">
+          <a href="#" aria-label="LinkedIn" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);border-radius:2px;transition:color .2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-          <!-- X/Twitter -->
-          <a href="#" aria-label="Twitter/X" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="#" aria-label="Twitter" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);border-radius:2px;transition:color .2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <!-- Spotify -->
-          <a href="#podcast" aria-label="Podcast" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);border-radius:2px;transition:all 0.2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12a4 4 0 018 0M6.5 10.5a6.5 6.5 0 0111 0M9.5 13.5a2.5 2.5 0 015 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+          <a href="#podcast" aria-label="Podcast" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);border-radius:2px;transition:color .2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="none"/><path d="M8 12a4 4 0 018 0M6 10.5a6.5 6.5 0 0112 0M10 14a2 2 0 004 0" stroke-linecap="round"/></svg>
           </a>
         </div>
       </div>
 
       <div>
-        <div class="label-caps mb-5" style="color:#c49a4a;font-size:0.62rem;">Servicios</div>
+        <div class="label-caps mb-5" style="color:#c49a4a;font-size:.6rem;">Áreas de Práctica</div>
         <ul class="space-y-3">
-          <li><a href="#areas"    class="text-sm" style="color:rgba(255,255,255,0.45);">Derecho Administrativo</a></li>
-          <li><a href="#areas"    class="text-sm" style="color:rgba(255,255,255,0.45);">Licitaciones Internacionales</a></li>
-          <li><a href="#areas"    class="text-sm" style="color:rgba(255,255,255,0.45);">Consultoría Corporativa</a></li>
-          <li><a href="#contacto" class="text-sm" style="color:rgba(255,255,255,0.45);">Arbitraje Internacional</a></li>
-          <li><a href="#contacto" class="text-sm" style="color:rgba(255,255,255,0.45);">Due Diligence Global</a></li>
+          <li><a href="#areas" class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Penal</a></li>
+          <li><a href="#areas" class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Corporativo</a></li>
+          <li><a href="#areas" class="text-sm" style="color:rgba(255,255,255,.45);">Hidrocarburos / PDVSA</a></li>
+          <li><a href="#areas" class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Constitucional</a></li>
+          <li><a href="#areas" class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Inmobiliario</a></li>
+          <li><a href="#areas" class="text-sm" style="color:rgba(255,255,255,.45);">Laboral y Tributario</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="label-caps mb-5" style="color:#c49a4a;font-size:0.62rem;">Firma</div>
+        <div class="label-caps mb-5" style="color:#c49a4a;font-size:.6rem;">La Firma</div>
         <ul class="space-y-3">
-          <li><a href="#"        class="text-sm" style="color:rgba(255,255,255,0.45);">Sobre Nosotros</a></li>
-          <li><a href="#"        class="text-sm" style="color:rgba(255,255,255,0.45);">Equipo de Socios</a></li>
-          <li><a href="#podcast" class="text-sm" style="color:rgba(255,255,255,0.45);">Podcast Legal</a></li>
-          <li><a href="#blog"    class="text-sm" style="color:rgba(255,255,255,0.45);">Publicaciones</a></li>
-          <li><a href="#contacto" class="text-sm" style="color:rgba(255,255,255,0.45);">Únase al Equipo</a></li>
+          <li><a href="#" class="text-sm" style="color:rgba(255,255,255,.45);">Nuestra Historia</a></li>
+          <li><a href="#equipo" class="text-sm" style="color:rgba(255,255,255,.45);">El Equipo</a></li>
+          <li><a href="#podcast" class="text-sm" style="color:rgba(255,255,255,.45);">Podcast Legal</a></li>
+          <li><a href="#blog" class="text-sm" style="color:rgba(255,255,255,.45);">Publicaciones</a></li>
+          <li><a href="#contacto" class="text-sm" style="color:rgba(255,255,255,.45);">A&amp;G Contadores</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="label-caps mb-5" style="color:#c49a4a;font-size:0.62rem;">Contacto</div>
+        <div class="label-caps mb-5" style="color:#c49a4a;font-size:.6rem;">Contacto</div>
         <ul class="space-y-3">
-          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,0.45);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            contacto@lexuniversalis.law
+          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,.45);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@gonzalezmorgan.law
           </li>
-          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,0.45);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#c49a4a" style="flex-shrink:0;margin-top:2px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            +1 (786) 555-0192
+          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,.45);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            Caracas · Maracaibo · Valencia · Lechería
           </li>
-          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,0.45);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,.45);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             Lun – Vie · 8:00 am – 6:00 pm (VET)
           </li>
         </ul>
+        <div class="mt-6 pt-5" style="border-top:1px solid rgba(255,255,255,.06);">
+          <div class="label-caps mb-3" style="color:rgba(255,255,255,.3);font-size:.58rem;">Redes Internacionales</div>
+          <div class="flex flex-col gap-2">
+            <span class="text-xs" style="color:rgba(255,255,255,.4);">⚖️ Club de Abogados</span>
+            <span class="text-xs" style="color:rgba(255,255,255,.4);">🌐 TAG Law</span>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="py-6 flex flex-col md:flex-row items-center justify-between gap-4" style="color:rgba(255,255,255,0.25);font-size:0.75rem;">
-      <span>© 2026 Lex Universalis · Estudio Jurídico Internacional. Todos los derechos reservados.</span>
+    <div class="py-6 flex flex-col md:flex-row items-center justify-between gap-4" style="color:rgba(255,255,255,.2);font-size:.72rem;">
+      <span>© 2026 González Morgan &amp; Asociados. Todos los derechos reservados. Fundado en 1980.</span>
       <div class="flex gap-6">
-        <a href="#" style="color:rgba(255,255,255,0.25);">Política de Privacidad</a>
-        <a href="#" style="color:rgba(255,255,255,0.25);">Aviso Legal</a>
-        <a href="#" style="color:rgba(255,255,255,0.25);">Términos de Servicio</a>
+        <a href="#" style="color:rgba(255,255,255,.2);">Política de Privacidad</a>
+        <a href="#" style="color:rgba(255,255,255,.2);">Aviso Legal</a>
+        <a href="#" style="color:rgba(255,255,255,.2);">Secreto Profesional</a>
       </div>
     </div>
   </div>
 </footer>
 
-
-<!-- ══════ TOAST ══════ -->
+<!-- TOAST -->
 <div id="toast">
-  <div style="display:flex;align-items:center;gap:0.75rem;">
+  <div style="display:flex;align-items:center;gap:.75rem;">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-    <span>Consulta enviada. Le contactaremos en menos de 24h.</span>
+    <span>Consulta enviada. Le contactaremos en menos de 24h hábiles.</span>
   </div>
 </div>
 
-
-<!-- ══════ JAVASCRIPT ══════ -->
 <script>
-  /* ── Navbar scroll ── */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
+  /* Navbar */
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60),{passive:true});
 
-  /* ── Mobile menu ── */
-  const burger     = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenuBtn = document.getElementById('close-menu');
-  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
-  closeMenuBtn.addEventListener('click', closeMobileMenu);
-  function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+  /* Mobile menu */
+  document.getElementById('burger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+  document.getElementById('close-menu').addEventListener('click',closeMobileMenu);
+  function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open')}
 
-  /* ── Scroll reveal ── */
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
-  revealEls.forEach(el => observer.observe(el));
+  /* Reveal */
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-  /* ── Smooth scroll ── */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
-      const t = document.querySelector(this.getAttribute('href'));
-      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-    });
-  });
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
 
-  /* ── Podcast player ── */
-  let isPlaying = false, progress = 35, totalSec = 52*60;
-  let currentSec = Math.round(totalSec * progress / 100), interval = null;
-
-  function fmt(s) { return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`; }
-  function updateUI() {
-    document.getElementById('progress-fill').style.width = progress + '%';
-    document.getElementById('current-time').textContent  = fmt(currentSec);
+  /* Podcast */
+  let isPlaying=false,progress=35,totalSec=48*60,currentSec=Math.round(totalSec*.35),interval=null;
+  function fmt(s){return`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
+  function updateUI(){document.getElementById('progress-fill').style.width=progress+'%';document.getElementById('current-time').textContent=fmt(currentSec)}
+  function togglePlay(){
+    isPlaying=!isPlaying;
+    const wv=document.getElementById('waveform'),icon=document.getElementById('play-icon');
+    if(isPlaying){icon.setAttribute('d','M6 19h4V5H6v14zm8-14v14h4V5h-4z');wv.classList.remove('paused');interval=setInterval(()=>{if(currentSec<totalSec){currentSec++;progress=(currentSec/totalSec)*100;updateUI()}else{clearInterval(interval);isPlaying=false;resetIcon();wv.classList.add('paused')}},1000)}
+    else{clearInterval(interval);resetIcon();wv.classList.add('paused')}
   }
-
-  function togglePlay() {
-    isPlaying = !isPlaying;
-    const waveform = document.getElementById('waveform');
-    const icon     = document.getElementById('play-icon');
-    if (isPlaying) {
-      icon.setAttribute('d', 'M6 19h4V5H6v14zm8-14v14h4V5h-4z'); // pause icon path
-      icon.parentElement.setAttribute('viewBox', '0 0 24 24');
-      waveform.classList.remove('paused');
-      interval = setInterval(() => {
-        if (currentSec < totalSec) { currentSec++; progress = (currentSec/totalSec)*100; updateUI(); }
-        else { clearInterval(interval); isPlaying = false; resetPlayIcon(); waveform.classList.add('paused'); }
-      }, 1000);
-    } else {
-      clearInterval(interval);
-      resetPlayIcon();
-      waveform.classList.add('paused');
-    }
-  }
-  function resetPlayIcon() {
-    const icon = document.getElementById('play-icon');
-    icon.setAttribute('d', 'M5 3l14 9-14 9V3z');
-  }
-
-  function skipBack()    { currentSec = Math.max(0, currentSec-15); progress = (currentSec/totalSec)*100; updateUI(); }
-  function skipForward() { currentSec = Math.min(totalSec, currentSec+15); progress = (currentSec/totalSec)*100; updateUI(); }
-  function seekAudio(e, bar) {
-    const r = bar.getBoundingClientRect();
-    const p = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
-    progress = p * 100; currentSec = Math.round(totalSec * p); updateUI();
-  }
+  function resetIcon(){document.getElementById('play-icon').setAttribute('d','M5 3l14 9-14 9V3z')}
+  function skipBack(){currentSec=Math.max(0,currentSec-15);progress=(currentSec/totalSec)*100;updateUI()}
+  function skipForward(){currentSec=Math.min(totalSec,currentSec+15);progress=(currentSec/totalSec)*100;updateUI()}
+  function seekAudio(e,bar){const r=bar.getBoundingClientRect(),p=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));progress=p*100;currentSec=Math.round(totalSec*p);updateUI()}
   updateUI();
 
-  /* ── Formspree AJAX submit ── */
-  async function handleSubmit(e) {
+  /* Formspree */
+  async function handleSubmit(e){
     e.preventDefault();
-    const form   = document.getElementById('contact-form');
-    const btn    = document.getElementById('submit-btn');
-    const status = document.getElementById('form-status');
-
-    // Basic validation
-    if (!document.getElementById('confidencial').checked) {
-      status.className = 'error';
-      status.textContent = 'Debe aceptar la cláusula de confidencialidad para continuar.';
-      return;
-    }
-
-    btn.disabled = true;
-    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite;"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Enviando...';
-
-    try {
-      const data = new FormData(form);
-      const res  = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        status.className = 'success';
-        status.textContent = '✓ Mensaje enviado con éxito. Le contactaremos en menos de 24 horas hábiles.';
-        form.reset();
-        showToast();
-      } else {
-        const json = await res.json();
-        status.className = 'error';
-        status.textContent = json.errors ? json.errors.map(e => e.message).join(', ')
-          : 'Error al enviar. Por favor intente de nuevo o contáctenos directamente.';
-      }
-    } catch {
-      status.className = 'error';
-      status.textContent = 'Error de conexión. Por favor intente más tarde.';
-    } finally {
-      btn.disabled = false;
-      btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar Consulta Confidencial';
-    }
+    const form=document.getElementById('contact-form'),btn=document.getElementById('submit-btn'),status=document.getElementById('form-status');
+    if(!document.getElementById('confidencial').checked){status.className='error';status.textContent='Debe aceptar la cláusula de confidencialidad.';return}
+    btn.disabled=true;btn.textContent='Enviando...';
+    try{
+      const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+      if(res.ok){status.className='success';status.textContent='✓ Consulta enviada. Le contactaremos en menos de 24 horas hábiles.';form.reset();showToast()}
+      else{const j=await res.json();status.className='error';status.textContent=j.errors?j.errors.map(x=>x.message).join(', '):'Error al enviar. Por favor intente de nuevo.'}
+    }catch{status.className='error';status.textContent='Error de conexión. Por favor intente más tarde.'}
+    finally{btn.disabled=false;btn.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar Consulta Confidencial'}
   }
-
-  function showToast() {
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 5500);
-  }
-
-  /* ── Spinner keyframe ── */
-  const style = document.createElement('style');
-  style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
-  document.head.appendChild(style);
+  function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),5500)}
 </script>
 </body>
 </html>
+
