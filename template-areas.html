@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área de Práctica | González Morgan &amp; Asociados</title>
+  <meta name="description" content="Firma jurídica internacional fundada en 1980. Especialistas en Derecho Penal, Corporativo, Hidrocarburos, Administrativo y más." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 900:'#070e28', 800:'#0c1a40', 700:'#122558', 600:'#1a3570', 500:'#2d4d8a' },
+            gold: { 300:'#e8d5a3', 400:'#d4b57a', 500:'#c49a4a', 600:'#a67c35', 700:'#8b6328' },
+            cream:{ 50:'#fdfcf9', 100:'#f8f5ef' },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"','Georgia','serif'],
+            sans:  ['"DM Sans"','system-ui','sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',system-ui,sans-serif;background-color:#fdfcf9;color:#1a2540;overflow-x:hidden}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#f8f5ef}::-webkit-scrollbar-thumb{background:#1a3570;border-radius:4px}
+    .display-xl{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;line-height:1.08;letter-spacing:-0.01em}
+    .label-caps{font-family:'DM Sans',system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
+
+    /* NAVBAR */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .5s cubic-bezier(.4,0,.2,1)}
+    #navbar.scrolled{background:rgba(7,14,40,.88);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(196,154,74,.18);box-shadow:0 8px 32px rgba(0,0,0,.28)}
+
+    /* PAGE HERO */
+    #page-hero{background:linear-gradient(135deg,#070e28 0%,#0c1a40 50%,#122558 100%);min-height:38vh;display:flex;align-items:flex-end;padding-top:7rem;padding-bottom:4rem;position:relative;overflow:hidden}
+    #page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to bottom,transparent,#fdfcf9)}
+    #page-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c49a4a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#c49a4a 0%,#a67c35 100%);color:#fff;padding:.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s ease;text-decoration:none;border-radius:1px}
+    .btn-primary:hover{background:linear-gradient(135deg,#d4b57a 0%,#c49a4a 100%);box-shadow:0 8px 30px rgba(196,154,74,.38);transform:translateY(-2px)}
+    .btn-outline-dark{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#1a3570;border:1px solid rgba(26,53,112,.3);padding:.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:all .3s ease;text-decoration:none;border-radius:1px}
+    .btn-outline-dark:hover{background:#f8f5ef;border-color:#1a3570}
+
+    .gold-divider{height:1px;background:linear-gradient(90deg,transparent,#c49a4a 40%,#c49a4a 60%,transparent);opacity:.35}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
+
+    /* MOBILE MENU */
+    #mobile-menu{display:none;position:fixed;inset:0;z-index:200;background:rgba(7,14,40,.97);backdrop-filter:blur(10px);flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    #mobile-menu.open{display:flex}
+    #mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#fff;letter-spacing:.05em;text-decoration:none;transition:color .2s}
+    #mobile-menu a:hover{color:#c49a4a}
+
+    #footer{background:#070e28;color:rgba(255,255,255,.6)}
+    #footer a{transition:color .2s}#footer a:hover{color:#c49a4a}
+
+    /* CONTENT AREA */
+    .prose-legal h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:#0c1a40;margin-bottom:1rem;margin-top:2.5rem;line-height:1.2}
+    .prose-legal h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#1a3570;margin-bottom:.75rem;margin-top:2rem}
+    .prose-legal p{color:#374151;line-height:1.8;margin-bottom:1.25rem;font-size:.95rem}
+    .prose-legal ul{list-style:none;padding:0;margin-bottom:1.5rem}
+    .prose-legal ul li{display:flex;align-items:flex-start;gap:.75rem;color:#374151;font-size:.9rem;line-height:1.6;margin-bottom:.6rem;padding-left:0}
+    .prose-legal ul li::before{content:'';display:block;width:5px;height:5px;border-radius:50%;background:#c49a4a;flex-shrink:0;margin-top:.55rem}
+    .prose-legal blockquote{border-left:3px solid #c49a4a;padding:1rem 1.5rem;background:#f8f5ef;margin:2rem 0;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:#1a3570;font-style:italic}
+  </style>
+</head>
+
+<body>
+
+<!-- ══════ NAVBAR ══════ -->
+<nav id="navbar" class="px-6 lg:px-12 py-5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="logo.png" alt="Logo González Morgan" class="h-11 w-auto object-contain" />
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:#fff;letter-spacing:.06em;line-height:1;">GONZÁLEZ MORGAN</div>
+        <div class="label-caps" style="color:#c49a4a;font-size:.56rem;letter-spacing:.25em;">&amp; Asociados · Estudio Jurídico Internacional</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center gap-7">
+      <a href="index.html#hero"          class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Inicio</a>
+      <a href="index.html#quienes-somos" class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Quiénes Somos</a>
+      <a href="index.html#equipo"        class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Socios</a>
+      <a href="index.html#areas"         class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Áreas de Experiencia</a>
+      <a href="index.html#actualidad"    class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Actualidad Jurídica</a>
+      <a href="index.html#contacto"      class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Contacto</a>
+      <a href="index.html#contacto" class="btn-primary" style="padding:.6rem 1.35rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        Consulta Global
+      </a>
+    </div>
+    <button id="burger" class="lg:hidden text-white p-2" aria-label="Abrir menú">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════ MOBILE MENU ══════ -->
+<div id="mobile-menu" role="dialog" aria-modal="true">
+  <button id="close-menu" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.7);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html#hero"          onclick="closeMobileMenu()">Inicio</a>
+  <a href="index.html#quienes-somos" onclick="closeMobileMenu()">Quiénes Somos</a>
+  <a href="index.html#equipo"        onclick="closeMobileMenu()">Socios</a>
+  <a href="index.html#areas"         onclick="closeMobileMenu()">Áreas de Experiencia</a>
+  <a href="index.html#actualidad"    onclick="closeMobileMenu()">Actualidad Jurídica</a>
+  <a href="index.html#contacto"      onclick="closeMobileMenu()">Contacto</a>
+  <a href="index.html#contacto" onclick="closeMobileMenu()" class="btn-primary" style="font-size:.85rem;margin-top:1rem;">Consulta Global</a>
+</div>
+
+
+<!-- ══════ PAGE HERO ══════ -->
+<section id="page-hero">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+    <!-- Breadcrumb -->
+    <div class="flex items-center gap-2 mb-5 reveal">
+      <a href="index.html" class="label-caps" style="color:rgba(255,255,255,.4);font-size:.6rem;text-decoration:none;">Inicio</a>
+      <span style="color:rgba(255,255,255,.2);font-size:.7rem;">›</span>
+      <a href="index.html#areas" class="label-caps" style="color:rgba(255,255,255,.4);font-size:.6rem;text-decoration:none;">Áreas de Experiencia</a>
+      <span style="color:rgba(255,255,255,.2);font-size:.7rem;">›</span>
+      <span class="label-caps" id="breadcrumb-area" style="color:#c49a4a;font-size:.6rem;">Área de Práctica</span>
+    </div>
+    <!-- Título del área — personalizar por archivo -->
+    <div class="label-caps mb-3 reveal reveal-delay-1" style="color:#c49a4a;font-size:.65rem;">Especialización Legal</div>
+    <h1 class="display-xl text-white mb-3 reveal reveal-delay-1" id="area-titulo" style="font-size:clamp(2.2rem,5vw,4rem);">
+      Nombre del Área Jurídica
+    </h1>
+    <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,.5);font-size:.9rem;font-style:italic;font-family:'Cormorant Garamond',serif;">González Morgan &amp; Asociados · Estudio Jurídico Internacional</p>
+  </div>
+</section>
+
+
+<!-- ══════ CONTENIDO PRINCIPAL ══════ -->
+<main class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-3 gap-16">
+
+      <!-- Columna de contenido extenso (2/3) -->
+      <div class="lg:col-span-2 prose-legal">
+        <!--
+          ═══════════════════════════════════════════════════════
+          PEGAR AQUÍ EL CONTENIDO TÉCNICO Y EXTENSO DEL ÁREA
+          ═══════════════════════════════════════════════════════
+
+          Estructura recomendada:
+
+          <h2>Descripción General</h2>
+          <p>Texto introductorio...</p>
+
+          <h2>Servicios que Ofrecemos</h2>
+          <ul>
+            <li>Servicio 1</li>
+            <li>Servicio 2</li>
+          </ul>
+
+          <blockquote>Cita o declaración de posicionamiento de la firma.</blockquote>
+
+          <h2>Marco Legal Aplicable</h2>
+          <p>Descripción del marco normativo...</p>
+
+          <h2>Casos Representativos</h2>
+          <p>...</p>
+        -->
+
+        <div class="reveal" style="padding:3rem;background:#f8f5ef;border-left:3px solid #c49a4a;text-align:center;">
+          <div class="label-caps mb-3" style="color:#c49a4a;font-size:.65rem;">Plantilla lista para contenido</div>
+          <p style="color:#1a3570;font-family:'Cormorant Garamond',serif;font-size:1.2rem;">
+            Reemplaza este bloque con el contenido técnico y detallado del área jurídica correspondiente.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Sidebar (1/3) -->
+      <aside class="lg:col-span-1 space-y-8">
+
+        <!-- CTA Consulta -->
+        <div class="reveal p-7" style="background:linear-gradient(160deg,#070e28,#1a3570);position:sticky;top:6rem;">
+          <div class="label-caps mb-3" style="color:#c49a4a;font-size:.6rem;">¿Necesita asesoría en esta área?</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#fff;line-height:1.2;margin-bottom:1rem;">Consulta confidencial con nuestros socios especializados</div>
+          <p style="color:rgba(255,255,255,.5);font-size:.82rem;margin-bottom:1.5rem;">Respuesta en menos de 24 horas hábiles. Secreto profesional garantizado.</p>
+          <a href="index.html#contacto" class="btn-primary" style="width:100%;justify-content:center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Iniciar Consulta
+          </a>
+        </div>
+
+        <!-- Otras áreas -->
+        <div class="reveal p-7" style="background:#f8f5ef;border:1px solid rgba(26,53,112,.07);">
+          <div class="label-caps mb-5" style="color:#1a3570;font-size:.6rem;">Otras Áreas de Práctica</div>
+          <ul class="space-y-3">
+            <li><a href="derecho-penal.html"          class="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors" style="text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Derecho Penal</a></li>
+            <li><a href="derecho-corporativo.html"    class="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors" style="text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Derecho Corporativo</a></li>
+            <li><a href="hidrocarburos.html"          class="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors" style="text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Hidrocarburos &amp; PDVSA</a></li>
+            <li><a href="derecho-constitucional.html" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors" style="text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Derecho Constitucional</a></li>
+            <li><a href="derecho-inmobiliario.html"   class="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors" style="text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Derecho Inmobiliario</a></li>
+            <li><a href="laboral-tributario.html"     class="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors" style="text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Laboral &amp; Tributario</a></li>
+          </ul>
+        </div>
+
+        <!-- Oficinas -->
+        <div class="reveal p-7" style="border:1px solid rgba(26,53,112,.07);">
+          <div class="label-caps mb-4" style="color:#c49a4a;font-size:.6rem;">Cobertura Geográfica</div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="p-3 text-center" style="background:#0c1a40;"><div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:#e8d5a3;">Caracas</div></div>
+            <div class="p-3 text-center" style="background:#1a3570;"><div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:#e8d5a3;">Maracaibo</div></div>
+            <div class="p-3 text-center" style="background:#1a3570;"><div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:#e8d5a3;">Valencia</div></div>
+            <div class="p-3 text-center" style="background:#0c1a40;"><div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:#e8d5a3;">Lechería</div></div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+<!-- ══════ FOOTER ══════ -->
+<footer id="footer">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="py-14 grid md:grid-cols-4 gap-10" style="border-bottom:1px solid rgba(255,255,255,.06);">
+
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="logo.png" alt="Logo González Morgan" class="h-11 w-auto object-contain" />
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#fff;letter-spacing:.06em;">GONZÁLEZ MORGAN</div>
+            <div class="label-caps" style="color:#c49a4a;font-size:.52rem;">&amp; Asociados · Est. 1980</div>
+          </div>
+        </div>
+        <p class="leading-relaxed mb-6" style="font-size:.82rem;color:rgba(255,255,255,.4);">Más de 45 años de excelencia jurídica desde Venezuela para el mundo.</p>
+        <div class="flex gap-3">
+          <a href="#" aria-label="LinkedIn" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);border-radius:2px;transition:color .2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);border-radius:2px;transition:color .2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="index.html#actualidad" aria-label="Podcast" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);border-radius:2px;transition:color .2s;" onmouseover="this.style.color='#c49a4a'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="none"/><path d="M8 12a4 4 0 018 0M6 10.5a6.5 6.5 0 0112 0M10 14a2 2 0 004 0" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="label-caps mb-5" style="color:#c49a4a;font-size:.6rem;">Áreas de Práctica</div>
+        <ul class="space-y-3">
+          <li><a href="derecho-penal.html"          class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Penal</a></li>
+          <li><a href="derecho-corporativo.html"    class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Corporativo</a></li>
+          <li><a href="hidrocarburos.html"          class="text-sm" style="color:rgba(255,255,255,.45);">Hidrocarburos / PDVSA</a></li>
+          <li><a href="derecho-constitucional.html" class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Constitucional</a></li>
+          <li><a href="derecho-inmobiliario.html"   class="text-sm" style="color:rgba(255,255,255,.45);">Derecho Inmobiliario</a></li>
+          <li><a href="laboral-tributario.html"     class="text-sm" style="color:rgba(255,255,255,.45);">Laboral y Tributario</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="label-caps mb-5" style="color:#c49a4a;font-size:.6rem;">La Firma</div>
+        <ul class="space-y-3">
+          <li><a href="index.html#quienes-somos" class="text-sm" style="color:rgba(255,255,255,.45);">Nuestra Historia</a></li>
+          <li><a href="index.html#equipo"         class="text-sm" style="color:rgba(255,255,255,.45);">El Equipo</a></li>
+          <li><a href="index.html#actualidad"     class="text-sm" style="color:rgba(255,255,255,.45);">Podcast Legal</a></li>
+          <li><a href="index.html#actualidad"     class="text-sm" style="color:rgba(255,255,255,.45);">Publicaciones</a></li>
+          <li><a href="index.html#contacto"       class="text-sm" style="color:rgba(255,255,255,.45);">A&amp;G Contadores</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="label-caps mb-5" style="color:#c49a4a;font-size:.6rem;">Contacto</div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,.45);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@gonzalezmorgan.law
+          </li>
+          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,.45);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            Caracas · Maracaibo · Valencia · Lechería
+          </li>
+          <li class="flex items-start gap-2 text-sm" style="color:rgba(255,255,255,.45);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="1.8" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Lun – Vie · 8:00 am – 6:00 pm (VET)
+          </li>
+        </ul>
+        <div class="mt-6 pt-5" style="border-top:1px solid rgba(255,255,255,.06);">
+          <div class="label-caps mb-3" style="color:rgba(255,255,255,.3);font-size:.58rem;">Redes Internacionales</div>
+          <div class="flex flex-col gap-2">
+            <span class="text-xs" style="color:rgba(255,255,255,.4);">⚖️ Club de Abogados</span>
+            <span class="text-xs" style="color:rgba(255,255,255,.4);">🌐 TAG Law</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 flex flex-col md:flex-row items-center justify-between gap-4" style="color:rgba(255,255,255,.2);font-size:.72rem;">
+      <span>© 2026 González Morgan &amp; Asociados. Todos los derechos reservados. Fundado en 1980.</span>
+      <div class="flex gap-6">
+        <a href="#" style="color:rgba(255,255,255,.2);">Política de Privacidad</a>
+        <a href="#" style="color:rgba(255,255,255,.2);">Aviso Legal</a>
+        <a href="#" style="color:rgba(255,255,255,.2);">Secreto Profesional</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Navbar */
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+
+  /* Mobile menu */
+  document.getElementById('burger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+  document.getElementById('close-menu').addEventListener('click',closeMobileMenu);
+  function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open')}
+
+  /* Reveal */
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
+</script>
+</body>
+</html>

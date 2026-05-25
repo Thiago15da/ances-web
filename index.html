@@ -43,7 +43,7 @@
     #navbar.scrolled{background:rgba(7,14,40,.88);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(196,154,74,.18);box-shadow:0 8px 32px rgba(0,0,0,.28)}
 
     /* HERO */
-    #hero{background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80');background-size:cover;background-position:center 30%;min-height:100vh;position:relative;display:flex;align-items:center}
+    #hero{background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');background-size:cover;background-position:center 30%;min-height:100vh;position:relative;display:flex;align-items:center}
     #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,14,40,.90) 0%,rgba(12,26,64,.80) 50%,rgba(18,37,88,.68) 100%)}
     #hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to bottom,transparent,#fdfcf9)}
 
@@ -134,20 +134,19 @@
 <nav id="navbar" class="px-6 lg:px-12 py-5">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <a href="#" class="flex items-center gap-3">
-      <div class="w-10 h-10 border flex items-center justify-center flex-shrink-0" style="border-color:#c49a4a;">
-        <span style="color:#c49a4a;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;">GM</span>
-      </div>
+      <img src="logo.png" alt="Logo González Morgan" class="h-11 w-auto object-contain" />
       <div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:#fff;letter-spacing:.06em;line-height:1;">GONZÁLEZ MORGAN</div>
         <div class="label-caps" style="color:#c49a4a;font-size:.56rem;letter-spacing:.25em;">&amp; Asociados · Estudio Jurídico Internacional</div>
       </div>
     </a>
     <div class="hidden lg:flex items-center gap-7">
-      <a href="#areas"    class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Áreas de Práctica</a>
-      <a href="#equipo"   class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">El Equipo</a>
-      <a href="#podcast"  class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Podcast</a>
-      <a href="#blog"     class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Actualidad</a>
-      <a href="#contacto" class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Contacto</a>
+      <a href="#hero"          class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Inicio</a>
+      <a href="#quienes-somos" class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Quiénes Somos</a>
+      <a href="#equipo"        class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Socios</a>
+      <a href="#areas"         class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Áreas de Experiencia</a>
+      <a href="#actualidad"    class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Actualidad Jurídica</a>
+      <a href="#contacto"      class="label-caps text-white transition-colors hover:text-yellow-300" style="font-size:.64rem;opacity:.75;">Contacto</a>
       <a href="#contacto" class="btn-primary" style="padding:.6rem 1.35rem;">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         Consulta Global
@@ -166,11 +165,12 @@
   <button id="close-menu" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.7);">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
-  <a href="#areas"    onclick="closeMobileMenu()">Áreas de Práctica</a>
-  <a href="#equipo"   onclick="closeMobileMenu()">El Equipo</a>
-  <a href="#podcast"  onclick="closeMobileMenu()">Podcast</a>
-  <a href="#blog"     onclick="closeMobileMenu()">Actualidad</a>
-  <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
+  <a href="#hero"          onclick="closeMobileMenu()">Inicio</a>
+  <a href="#quienes-somos" onclick="closeMobileMenu()">Quiénes Somos</a>
+  <a href="#equipo"        onclick="closeMobileMenu()">Socios</a>
+  <a href="#areas"         onclick="closeMobileMenu()">Áreas de Experiencia</a>
+  <a href="#actualidad"    onclick="closeMobileMenu()">Actualidad Jurídica</a>
+  <a href="#contacto"      onclick="closeMobileMenu()">Contacto</a>
   <a href="#contacto" onclick="closeMobileMenu()" class="btn-primary" style="font-size:.85rem;margin-top:1rem;">Consulta Global</a>
 </div>
 
@@ -245,8 +245,8 @@
 </section>
 
 
-<!-- ══════ SOBRE LA FIRMA ══════ -->
-<section class="py-24 bg-white">
+<!-- ══════ QUIÉNES SOMOS ══════ -->
+<section id="quienes-somos" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
     <div class="reveal">
       <div class="label-caps mb-4" style="color:#c49a4a;">Nuestra Historia</div>
@@ -326,7 +326,7 @@
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compliance Penal Corporativo</li>
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Fuero marítimo y aduanero</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="derecho-penal.html" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Ver práctica completa <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <!-- 2. Corporativo — destacado -->
@@ -342,7 +342,7 @@
           <li class="flex items-center gap-2 text-xs" style="color:rgba(255,255,255,.55);"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Fusiones, adquisiciones y Due Diligence</li>
           <li class="flex items-center gap-2 text-xs" style="color:rgba(255,255,255,.55);"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Gobierno corporativo y pactos de socios</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="derecho-corporativo.html" class="label-caps flex items-center gap-2" style="color:#c49a4a;font-size:.62rem;">Ver práctica completa <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <!-- 3. Hidrocarburos -->
@@ -358,7 +358,7 @@
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Contract Management y Claims</li>
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compliance internacional y sanciones</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="hidrocarburos.html" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Ver práctica completa <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <!-- 4. Constitucional -->
@@ -374,7 +374,7 @@
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> CIDH y Corte IDH</li>
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Blindaje patrimonial corporativo</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="derecho-constitucional.html" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Ver práctica completa <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <!-- 5. Inmobiliario -->
@@ -390,7 +390,7 @@
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tramitación ante SUNAVI</li>
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Due Diligence registral</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="derecho-inmobiliario.html" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Ver práctica completa <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <!-- 6. Laboral / Tributario / Civil -->
@@ -406,7 +406,7 @@
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Planificación fiscal y tributaria</li>
           <li class="flex items-center gap-2 text-xs text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="#c49a4a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Arbitraje y mediación</li>
         </ul>
-        <a href="#contacto" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="laboral-tributario.html" class="label-caps flex items-center gap-2" style="color:#1a3570;font-size:.62rem;">Ver práctica completa <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
     </div>
@@ -463,83 +463,77 @@
 </section>
 
 
-<!-- ══════ PODCAST ══════ -->
-<section id="podcast">
-  <div class="relative z-10 py-28 max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-      <div class="reveal">
-        <div class="label-caps mb-5" style="color:#c49a4a;">Canal de Difusión Jurídica</div>
-        <h2 class="display-xl text-white mb-6" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;">
-          González Morgan<br/><em style="color:#c49a4a;">Podcast Legal</em>
-        </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,.55);font-size:.95rem;">Análisis profundo de la actualidad jurídica venezolana e internacional: derecho de hidrocarburos, litigación penal, contratación pública, compliance y tendencias corporativas. Un recurso esencial para ejecutivos, asesores y empresarios.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="https://spotify.com" target="_blank" rel="noopener" class="btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 168 168"><path fill="#fff" d="M84 0C37.6 0 0 37.6 0 84s37.6 84 84 84 84-37.6 84-84S130.4 0 84 0zm38.6 121.2c-1.5 2.5-4.8 3.3-7.3 1.8-20-12.2-45.1-15-74.8-8.2-2.9.7-5.7-1.1-6.4-3.9-.7-2.9 1.1-5.7 3.9-6.4 32.4-7.4 60.2-4.2 82.6 9.5 2.5 1.4 3.3 4.7 2 7.2zm10.3-22.9c-1.9 3.1-6 4.1-9.1 2.2-22.9-14.1-57.8-18.1-84.9-9.9-3.5 1.1-7.2-.9-8.3-4.4-1.1-3.5.9-7.2 4.4-8.3 30.9-9.4 69.4-4.8 95.7 11.3 3.1 1.9 4.1 6 2.2 9.1zm.9-23.8c-27.5-16.3-72.9-17.8-99.2-9.8-4.2 1.3-8.6-1.1-9.9-5.3-1.3-4.2 1.1-8.6 5.3-9.9 30.2-9.2 80.4-7.4 112.2 11.3 3.8 2.3 5 7.2 2.8 11-2.2 3.7-7.2 5-11.2 2.7z"/></svg>
-            Escuchar en Spotify
-          </a>
-          <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="btn-outline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164.7-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-42.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.4 130.3-317 255.3-317 71.6 0 131.1 46.9 176.7 46.9 43.2 0 113.2-49.5 195.8-49.5 31.5 0 124.3 3.6 187.3 137.7zM540.9 162.7c25.2-31.5 43.4-76.5 43.4-121.5 0-6.4-.5-12.8-1.4-18.6-41.8 1.5-92.2 27.7-124.2 64.2-22.3 25.2-43.5 70.1-43.5 115.1 0 7.2.9 14.4 2.2 21.2 4.2.7 8.7 1.1 13.2 1.1 37.5.1 84.8-24.4 110.3-61.5z"/></svg>
-            Apple Podcasts
-          </a>
-        </div>
-      </div>
-
-      <div class="reveal reveal-delay-2">
-        <div class="mb-6 p-6 rounded-sm" style="background:rgba(255,255,255,.04);border:1px solid rgba(196,154,74,.15);">
-          <div class="label-caps mb-4" style="color:rgba(255,255,255,.35);font-size:.6rem;">Episodio Más Reciente — EP. 12</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#fff;margin-bottom:.5rem;line-height:1.2;">Contratos con PDVSA en 2026: riesgos jurídicos, sanciones internacionales y estrategias de compliance</div>
-          <div class="label-caps" style="color:#c49a4a;font-size:.6rem;">Dr. César González Toro · 48 min</div>
-        </div>
-        <div class="p-6 rounded-sm" style="background:rgba(255,255,255,.06);border:1px solid rgba(196,154,74,.12);backdrop-filter:blur(10px);">
-          <div class="waveform mb-5" id="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="progress-bar mb-4" id="progress-bar" onclick="seekAudio(event,this)"><div class="progress-fill" id="progress-fill"></div></div>
-          <div class="flex justify-between mb-5">
-            <span class="label-caps" id="current-time" style="color:rgba(255,255,255,.4);font-size:.6rem;">16:48</span>
-            <span class="label-caps" style="color:rgba(255,255,255,.4);font-size:.6rem;">48:00</span>
-          </div>
-          <div class="flex items-center justify-center gap-6">
-            <button onclick="skipBack()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-5.11"/></svg>
-            </button>
-            <button id="play-btn" onclick="togglePlay()" style="width:3.5rem;height:3.5rem;border-radius:50%;background:linear-gradient(135deg,#c49a4a,#a67c35);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(196,154,74,.3);transition:transform .2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-              <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </button>
-            <button onclick="skipForward()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-5.11"/></svg>
-            </button>
-          </div>
-        </div>
-        <div class="mt-4 space-y-2">
-          <div class="flex items-center justify-between px-4 py-3 cursor-pointer" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);">
-            <div><div class="text-sm" style="color:rgba(255,255,255,.7);">EP.11 · Amparo constitucional: cuándo es el recurso correcto</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.3);font-size:.58rem;">44 min</div></div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </div>
-          <div class="flex items-center justify-between px-4 py-3 cursor-pointer" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);">
-            <div><div class="text-sm" style="color:rgba(255,255,255,.7);">EP.10 · Due Diligence en adquisiciones corporativas venezolanas</div><div class="label-caps mt-1" style="color:rgba(255,255,255,.3);font-size:.58rem;">52 min</div></div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════ BLOG ══════ -->
-<section id="blog" class="py-24" style="background:#fdfcf9;">
+<!-- ══════ ACTUALIDAD JURÍDICA (Biblioteca Digital Unificada) ══════ -->
+<section id="actualidad" class="py-24" style="background:#fdfcf9;">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6 reveal">
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 reveal">
       <div>
-        <div class="label-caps mb-4" style="color:#c49a4a;">Publicaciones &amp; Análisis</div>
+        <div class="label-caps mb-4" style="color:#c49a4a;">Publicaciones, Análisis &amp; Podcast</div>
         <h2 class="display-xl" style="font-size:clamp(2rem,4.5vw,3rem);color:#0c1a40;">Actualidad Jurídica</h2>
       </div>
-      <a href="#" class="label-caps flex items-center gap-2 self-start" style="color:#1a3570;font-size:.68rem;">Ver todos los artículos <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#" class="label-caps flex items-center gap-2 self-start" style="color:#1a3570;font-size:.68rem;">Ver archivo completo <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
 
-      <article class="blog-card reveal">
+    <!-- Filtros -->
+    <div class="flex flex-wrap gap-3 mb-12 reveal" id="actualidad-filters">
+      <button onclick="filterActualidad('todo',this)" style="font-size:.63rem;background:#0c1a40;color:#fff;border:1px solid #0c1a40;cursor:pointer;transition:all .2s;padding:.6rem 1.4rem;" class="label-caps">Todo</button>
+      <button onclick="filterActualidad('articulos',this)" style="font-size:.63rem;background:transparent;color:#1a3570;border:1px solid rgba(26,53,112,.25);cursor:pointer;transition:all .2s;padding:.6rem 1.4rem;" class="label-caps">Artículos</button>
+      <button onclick="filterActualidad('podcasts',this)" style="font-size:.63rem;background:transparent;color:#1a3570;border:1px solid rgba(26,53,112,.25);cursor:pointer;transition:all .2s;padding:.6rem 1.4rem;" class="label-caps">Podcasts</button>
+    </div>
+
+    <!-- Grilla unificada -->
+    <div class="grid md:grid-cols-3 gap-8 items-start" id="actualidad-grid">
+
+      <!-- PODCAST CARD -->
+      <div class="actualidad-item reveal" data-type="podcasts" style="display:flex;flex-direction:column;">
+        <div style="background:linear-gradient(160deg,#070e28,#1a3570);border:1px solid rgba(196,154,74,.15);display:flex;flex-direction:column;height:100%;">
+          <div class="p-7 flex-1">
+            <div class="label-caps mb-1" style="color:#c49a4a;font-size:.58rem;">Podcast Legal · González Morgan</div>
+            <div class="label-caps mb-4" style="color:rgba(255,255,255,.3);font-size:.55rem;">EP. 12 — Episodio Más Reciente</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#fff;margin-bottom:.5rem;line-height:1.25;">Contratos con PDVSA en 2026: riesgos jurídicos y estrategias de compliance</div>
+            <div class="label-caps mb-6" style="color:rgba(255,255,255,.4);font-size:.58rem;">Dr. César González Toro · 48 min</div>
+            <div class="waveform mb-4" id="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="progress-bar mb-3" id="progress-bar" onclick="seekAudio(event,this)"><div class="progress-fill" id="progress-fill"></div></div>
+            <div class="flex justify-between mb-5">
+              <span class="label-caps" id="current-time" style="color:rgba(255,255,255,.4);font-size:.6rem;">16:48</span>
+              <span class="label-caps" style="color:rgba(255,255,255,.4);font-size:.6rem;">48:00</span>
+            </div>
+            <div class="flex items-center justify-center gap-5 mb-6">
+              <button onclick="skipBack()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-5.11"/></svg>
+              </button>
+              <button id="play-btn" onclick="togglePlay()" style="width:3rem;height:3rem;border-radius:50%;background:linear-gradient(135deg,#c49a4a,#a67c35);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(196,154,74,.3);transition:transform .2s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <button onclick="skipForward()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-5.11"/></svg>
+              </button>
+            </div>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center justify-between px-3 py-2.5 cursor-pointer" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);">
+                <div><div class="text-xs" style="color:rgba(255,255,255,.65);">EP.11 · Amparo constitucional: cuándo es el recurso correcto</div><div class="label-caps mt-0.5" style="color:rgba(255,255,255,.3);font-size:.55rem;">44 min</div></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <div class="flex items-center justify-between px-3 py-2.5 cursor-pointer" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);">
+                <div><div class="text-xs" style="color:rgba(255,255,255,.65);">EP.10 · Due Diligence en adquisiciones corporativas venezolanas</div><div class="label-caps mt-0.5" style="color:rgba(255,255,255,.3);font-size:.55rem;">52 min</div></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="#c49a4a" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="px-7 py-4 flex items-center gap-4" style="border-top:1px solid rgba(196,154,74,.12);">
+            <a href="https://spotify.com" target="_blank" rel="noopener" class="label-caps flex items-center gap-1.5" style="color:#c49a4a;font-size:.58rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 168 168"><path fill="#c49a4a" d="M84 0C37.6 0 0 37.6 0 84s37.6 84 84 84 84-37.6 84-84S130.4 0 84 0zm38.6 121.2c-1.5 2.5-4.8 3.3-7.3 1.8-20-12.2-45.1-15-74.8-8.2-2.9.7-5.7-1.1-6.4-3.9-.7-2.9 1.1-5.7 3.9-6.4 32.4-7.4 60.2-4.2 82.6 9.5 2.5 1.4 3.3 4.7 2 7.2zm10.3-22.9c-1.9 3.1-6 4.1-9.1 2.2-22.9-14.1-57.8-18.1-84.9-9.9-3.5 1.1-7.2-.9-8.3-4.4-1.1-3.5.9-7.2 4.4-8.3 30.9-9.4 69.4-4.8 95.7 11.3 3.1 1.9 4.1 6 2.2 9.1zm.9-23.8c-27.5-16.3-72.9-17.8-99.2-9.8-4.2 1.3-8.6-1.1-9.9-5.3-1.3-4.2 1.1-8.6 5.3-9.9 30.2-9.2 80.4-7.4 112.2 11.3 3.8 2.3 5 7.2 2.8 11-2.2 3.7-7.2 5-11.2 2.7z"/></svg>
+              Spotify
+            </a>
+            <span style="color:rgba(255,255,255,.2);">·</span>
+            <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="label-caps" style="color:#c49a4a;font-size:.58rem;">Apple Podcasts</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTÍCULO 1 -->
+      <article class="blog-card actualidad-item reveal reveal-delay-1" data-type="articulos">
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=75" alt="Tribunal Supremo" loading="lazy"/></div>
         <div class="p-8">
           <div class="flex items-center gap-3 mb-4"><span class="label-caps px-2 py-1" style="color:#fff;background:#0c1a40;font-size:.56rem;">Derecho Penal</span><span class="text-xs text-gray-400">15 May 2026</span></div>
@@ -549,7 +543,8 @@
         </div>
       </article>
 
-      <article class="blog-card reveal reveal-delay-1">
+      <!-- ARTÍCULO 2 -->
+      <article class="blog-card actualidad-item reveal reveal-delay-2" data-type="articulos">
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=75" alt="Reunión corporativa" loading="lazy"/></div>
         <div class="p-8">
           <div class="flex items-center gap-3 mb-4"><span class="label-caps px-2 py-1" style="color:#fff;background:#c49a4a;font-size:.56rem;">Hidrocarburos</span><span class="text-xs text-gray-400">08 May 2026</span></div>
@@ -559,7 +554,8 @@
         </div>
       </article>
 
-      <article class="blog-card reveal reveal-delay-2">
+      <!-- ARTÍCULO 3 (segunda fila) -->
+      <article class="blog-card actualidad-item reveal" data-type="articulos">
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=75" alt="Documentos legales" loading="lazy"/></div>
         <div class="p-8">
           <div class="flex items-center gap-3 mb-4"><span class="label-caps px-2 py-1" style="color:#fff;background:#2d4d8a;font-size:.56rem;">Inmobiliario</span><span class="text-xs text-gray-400">30 Abr 2026</span></div>
@@ -700,9 +696,7 @@
 
       <div class="md:col-span-1">
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-9 h-9 border flex items-center justify-center flex-shrink-0" style="border-color:#c49a4a;">
-            <span style="color:#c49a4a;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;">GM</span>
-          </div>
+          <img src="logo.png" alt="Logo González Morgan" class="h-11 w-auto object-contain" />
           <div>
             <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:#fff;letter-spacing:.06em;">GONZÁLEZ MORGAN</div>
             <div class="label-caps" style="color:#c49a4a;font-size:.52rem;">&amp; Asociados · Est. 1980</div>
@@ -739,8 +733,8 @@
         <ul class="space-y-3">
           <li><a href="#" class="text-sm" style="color:rgba(255,255,255,.45);">Nuestra Historia</a></li>
           <li><a href="#equipo" class="text-sm" style="color:rgba(255,255,255,.45);">El Equipo</a></li>
-          <li><a href="#podcast" class="text-sm" style="color:rgba(255,255,255,.45);">Podcast Legal</a></li>
-          <li><a href="#blog" class="text-sm" style="color:rgba(255,255,255,.45);">Publicaciones</a></li>
+          <li><a href="#actualidad" class="text-sm" style="color:rgba(255,255,255,.45);">Podcast Legal</a></li>
+          <li><a href="#actualidad" class="text-sm" style="color:rgba(255,255,255,.45);">Publicaciones</a></li>
           <li><a href="#contacto" class="text-sm" style="color:rgba(255,255,255,.45);">A&amp;G Contadores</a></li>
         </ul>
       </div>
@@ -808,19 +802,34 @@
 
   /* Podcast */
   let isPlaying=false,progress=35,totalSec=48*60,currentSec=Math.round(totalSec*.35),interval=null;
+  const SVG_PLAY='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+  const SVG_PAUSE='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
   function fmt(s){return`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
   function updateUI(){document.getElementById('progress-fill').style.width=progress+'%';document.getElementById('current-time').textContent=fmt(currentSec)}
   function togglePlay(){
     isPlaying=!isPlaying;
-    const wv=document.getElementById('waveform'),icon=document.getElementById('play-icon');
-    if(isPlaying){icon.setAttribute('d','M6 19h4V5H6v14zm8-14v14h4V5h-4z');wv.classList.remove('paused');interval=setInterval(()=>{if(currentSec<totalSec){currentSec++;progress=(currentSec/totalSec)*100;updateUI()}else{clearInterval(interval);isPlaying=false;resetIcon();wv.classList.add('paused')}},1000)}
-    else{clearInterval(interval);resetIcon();wv.classList.add('paused')}
+    const wv=document.getElementById('waveform'),btn=document.getElementById('play-btn');
+    if(isPlaying){
+      btn.innerHTML=SVG_PAUSE;
+      wv.classList.remove('paused');
+      interval=setInterval(()=>{if(currentSec<totalSec){currentSec++;progress=(currentSec/totalSec)*100;updateUI()}else{clearInterval(interval);isPlaying=false;btn.innerHTML=SVG_PLAY;wv.classList.add('paused')}},1000)
+    } else {
+      clearInterval(interval);
+      btn.innerHTML=SVG_PLAY;
+      wv.classList.add('paused')
+    }
   }
-  function resetIcon(){document.getElementById('play-icon').setAttribute('d','M5 3l14 9-14 9V3z')}
   function skipBack(){currentSec=Math.max(0,currentSec-15);progress=(currentSec/totalSec)*100;updateUI()}
   function skipForward(){currentSec=Math.min(totalSec,currentSec+15);progress=(currentSec/totalSec)*100;updateUI()}
   function seekAudio(e,bar){const r=bar.getBoundingClientRect(),p=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));progress=p*100;currentSec=Math.round(totalSec*p);updateUI()}
   updateUI();
+
+  /* Filtros Actualidad */
+  function filterActualidad(type,btn){
+    document.querySelectorAll('#actualidad-filters button').forEach(b=>{b.style.background='transparent';b.style.color='#1a3570';b.style.border='1px solid rgba(26,53,112,.25)'});
+    btn.style.background='#0c1a40';btn.style.color='#fff';btn.style.border='1px solid #0c1a40';
+    document.querySelectorAll('.actualidad-item').forEach(item=>{item.style.display=(type==='todo'||item.dataset.type===type)?'':'none'});
+  }
 
   /* Formspree */
   async function handleSubmit(e){
