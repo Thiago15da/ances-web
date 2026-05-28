@@ -456,7 +456,9 @@
             <div class="label-caps mb-4" style="color:rgba(255,255,255,.3);font-size:.55rem;">EP. 12 — Episodio Más Reciente</div>
             <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#fff;margin-bottom:.5rem;line-height:1.25;">Contratos con PDVSA en 2026: riesgos jurídicos y estrategias de compliance</div>
             <div class="label-caps mb-6" style="color:rgba(255,255,255,.4);font-size:.58rem;">Dr. César González Toro · 48 min</div>
-            <div class="waveform mb-4" id="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <audio id="podcast-audio" preload="none"></audio>
+            <div class="waveform paused mb-4" id="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="label-caps mb-2" id="podcast-soon" style="color:rgba(255,255,255,.25);font-size:.55rem;text-align:center;">Episodio completo disponible próximamente en Spotify</div>
             <div class="progress-bar mb-3" id="progress-bar" onclick="seekAudio(event,this)"><div class="progress-fill" id="progress-fill"></div></div>
             <div class="flex justify-between mb-5">
               <span class="label-caps" id="current-time" style="color:rgba(255,255,255,.4);font-size:.6rem;">16:48</span>
@@ -764,27 +766,50 @@
   document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
 
   /* Podcast */
-  let isPlaying=false,progress=35,totalSec=48*60,currentSec=Math.round(totalSec*.35),interval=null;
+  const audioEl=document.getElementById('podcast-audio');
+  const soonEl=document.getElementById('podcast-soon');
+  let isPlaying=false,progress=0,totalSec=48*60,currentSec=0,interval=null;
   const SVG_PLAY='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
   const SVG_PAUSE='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
-  function fmt(s){return`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
+  function fmt(s){return`${Math.floor(s/60)}:${String(Math.round(s)%60).padStart(2,'0')}`}
+  function hasSrc(){return audioEl.src&&!audioEl.src.endsWith(window.location.href)}
   function updateUI(){document.getElementById('progress-fill').style.width=progress+'%';document.getElementById('current-time').textContent=fmt(currentSec)}
+
+  /* Wire real audio events */
+  audioEl.addEventListener('loadedmetadata',()=>{totalSec=audioEl.duration;if(soonEl)soonEl.style.display='none'});
+  audioEl.addEventListener('timeupdate',()=>{if(hasSrc()){currentSec=audioEl.currentTime;progress=(currentSec/totalSec)*100;updateUI()}});
+  audioEl.addEventListener('ended',()=>{const btn=document.getElementById('play-btn');btn.innerHTML=SVG_PLAY;document.getElementById('waveform').classList.add('paused');isPlaying=false});
+  audioEl.addEventListener('play',()=>{document.getElementById('waveform').classList.remove('paused');document.getElementById('play-btn').innerHTML=SVG_PAUSE;isPlaying=true});
+  audioEl.addEventListener('pause',()=>{document.getElementById('waveform').classList.add('paused');document.getElementById('play-btn').innerHTML=SVG_PLAY;isPlaying=false});
+
   function togglePlay(){
-    isPlaying=!isPlaying;
     const wv=document.getElementById('waveform'),btn=document.getElementById('play-btn');
-    if(isPlaying){
-      btn.innerHTML=SVG_PAUSE;
-      wv.classList.remove('paused');
-      interval=setInterval(()=>{if(currentSec<totalSec){currentSec++;progress=(currentSec/totalSec)*100;updateUI()}else{clearInterval(interval);isPlaying=false;btn.innerHTML=SVG_PLAY;wv.classList.add('paused')}},1000)
+    if(hasSrc()){
+      audioEl.paused?audioEl.play():audioEl.pause();
     } else {
-      clearInterval(interval);
-      btn.innerHTML=SVG_PLAY;
-      wv.classList.add('paused')
+      /* Simulation fallback — no audio file loaded yet */
+      isPlaying=!isPlaying;
+      if(isPlaying){
+        btn.innerHTML=SVG_PAUSE;wv.classList.remove('paused');
+        interval=setInterval(()=>{if(currentSec<totalSec){currentSec++;progress=(currentSec/totalSec)*100;updateUI()}else{clearInterval(interval);isPlaying=false;btn.innerHTML=SVG_PLAY;wv.classList.add('paused')}},1000)
+      } else {
+        clearInterval(interval);btn.innerHTML=SVG_PLAY;wv.classList.add('paused')
+      }
     }
   }
-  function skipBack(){currentSec=Math.max(0,currentSec-15);progress=(currentSec/totalSec)*100;updateUI()}
-  function skipForward(){currentSec=Math.min(totalSec,currentSec+15);progress=(currentSec/totalSec)*100;updateUI()}
-  function seekAudio(e,bar){const r=bar.getBoundingClientRect(),p=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));progress=p*100;currentSec=Math.round(totalSec*p);updateUI()}
+  function skipBack(){
+    if(hasSrc()){audioEl.currentTime=Math.max(0,audioEl.currentTime-15)}
+    else{currentSec=Math.max(0,currentSec-15);progress=(currentSec/totalSec)*100;updateUI()}
+  }
+  function skipForward(){
+    if(hasSrc()){audioEl.currentTime=Math.min(totalSec,audioEl.currentTime+15)}
+    else{currentSec=Math.min(totalSec,currentSec+15);progress=(currentSec/totalSec)*100;updateUI()}
+  }
+  function seekAudio(e,bar){
+    const r=bar.getBoundingClientRect(),p=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));
+    if(hasSrc()){audioEl.currentTime=p*totalSec}
+    else{progress=p*100;currentSec=Math.round(totalSec*p);updateUI()}
+  }
   updateUI();
 
   /* Filtros Actualidad */
